@@ -1,4 +1,4 @@
-import * as binoculars from '../src';
+import binoculars from '../../bin/binoculars';
 
 describe('@foo-software/binoculars', () => {
   it('should match snapshot', () => {
