@@ -2,19 +2,26 @@
 
 A tool to measure web page SEO friendliness.
 
-## WIP Categories
+## Metrics
 
-- Meta data:
-  - Completeness: presence of fundamental meta tags like title, description, and og:image.
-  - Content: character length check of the above content.
-  - Structured data: has at least one representation of structured data.
-- View (better phrasing needed):
-  - Language attribute on `html` tag.
-  - Mobile support.
-- Content:
-  - At least one image?
-  - Presence of prominent keywords throughout the page.
-  - Variety of elements like lists, images, links, paragraphs.
-  - Presence of `h1` and `h2`.
-- Peformance, Acessibility and SEO extended
-  - Handle this with Lighthouse. Don't be too harsh on performance since Lighthouse is flaky. Maybe target above a score of `50`.
+Below are metrics we'll pull together and weights to generate a report. Most metrics come from Lighthouse, but we have some custom ones as well.
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Weight</th>
+    <th>Source</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Performance
+    </td>
+  </tr>
+  <tr>
+    <td>total-blocking-time</td>
+    <td>Total Blocking Time</td>
+    <td>25</td>
+    <td>Lighthouse</td>
+  </tr>
+</table>
