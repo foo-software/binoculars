@@ -61,6 +61,8 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "chrome-launcher": "^0.13.4",
+    "lighthouse": "^6.2.0",
     "meow": "^7.1.0",
     "puppeteer": "^5.2.1"
   }
