@@ -14,9 +14,9 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <th>Source</th>
   </tr>
   <tr>
-    <td colspan="4">
+    <th colspan="4">
       Performance
-    </td>
+    </th>
   </tr>
   <tr>
     <td>largest-contentful-paint</td>
@@ -55,9 +55,9 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td colspan="4">
+    <th colspan="4">
       Accessibility
-    </td>
+    </th>
   </tr>
   <tr>
     <td>aria-hidden-body</td>
