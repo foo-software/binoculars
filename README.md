@@ -19,9 +19,15 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     </td>
   </tr>
   <tr>
-    <td>cumulative-layout-shift</td>
-    <td>Cumulative Layout Shift</td>
-    <td>5</td>
+    <td>largest-contentful-paint</td>
+    <td>Largest Contentful Paint</td>
+    <td>25</td>
+    <td>Lighthouse</td>
+  </tr>
+  <tr>
+    <td>total-blocking-time</td>
+    <td>Total Blocking Time</td>
+    <td>25</td>
     <td>Lighthouse</td>
   </tr>
   <tr>
@@ -37,21 +43,15 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td>largest-contentful-paint</td>
-    <td>Largest Contentful Paint</td>
-    <td>25</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
     <td>speed-index</td>
     <td>Speed Index</td>
     <td>15</td>
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td>total-blocking-time</td>
-    <td>Total Blocking Time</td>
-    <td>25</td>
+    <td>cumulative-layout-shift</td>
+    <td>Cumulative Layout Shift</td>
+    <td>5</td>
     <td>Lighthouse</td>
   </tr>
 </table>
