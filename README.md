@@ -90,6 +90,18 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
+    <td>image-alt</td>
+    <td>Image elements have <code>[alt]</code> attributes</td>
+    <td>10</td>
+    <td>Lighthouse</td>
+  </tr>
+  <tr>
+    <td>meta-viewport</td>
+    <td><code>[user-scalable="no"]</code> is not used in the <code>&lt;meta name="viewport"&gt;</code> element and the <code>[maximum-scale]</code> attribute is not less than 5.</td>
+    <td>10</td>
+    <td>Lighthouse</td>
+  </tr>
+  <tr>
     <td>bypass</td>
     <td>The page contains a heading, skip link, or landmark region</td>
     <td>3</td>
@@ -108,12 +120,6 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td>heading-order</td>
-    <td>Heading elements are not in a sequentially-descending order</td>
-    <td>2</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
     <td>html-has-lang</td>
     <td><code>html</code> element has a <code>[lang]</code> attribute</td>
     <td>3</td>
@@ -123,12 +129,6 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>html-lang-valid</td>
     <td><code>html</code> element has a valid value for its <code>[lang]</code> attribute</td>
     <td>3</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <td>image-alt</td>
-    <td>Image elements have <code>[alt]</code> attributes</td>
-    <td>10</td>
     <td>Lighthouse</td>
   </tr>
   <tr>
@@ -150,9 +150,9 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td>meta-viewport</td>
-    <td><code>[user-scalable=\"no\"]</code> is not used in the <code>&lt;meta name="viewport"&gt;</code> element and the <code>[maximum-scale]</code> attribute is not less than 5.</td>
-    <td>10</td>
+    <td>heading-order</td>
+    <td>Heading elements are not in a sequentially-descending order</td>
+    <td>2</td>
     <td>Lighthouse</td>
   </tr>
 </table>
