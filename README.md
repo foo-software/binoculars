@@ -151,7 +151,7 @@ Below are metrics we'll pull together and weights to generate a report. Most met
   </tr>
   <tr>
     <td>meta-viewport</td>
-    <td><code>[user-scalable=\"no\"]</code> is not used in the <code>&lt;meta name="viewport"&gt;</code> element and the `[maximum-scale]` attribute is not less than 5.</td>
+    <td><code>[user-scalable=\"no\"]</code> is not used in the <code>&lt;meta name="viewport"&gt;</code> element and the <code>[maximum-scale]</code> attribute is not less than 5.</td>
     <td>10</td>
     <td>Lighthouse</td>
   </tr>
