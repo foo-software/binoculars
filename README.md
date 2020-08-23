@@ -157,8 +157,14 @@ Below are metrics we'll pull together and weights to generate a report. Most met
   </tr>
   <tr>
     <th colspan="4">
-      Content
+      Searchability
     </th>
+  </tr>
+  <tr>
+    <td>document-title</td>
+    <td>Document has a <code>&lt;title&gt;</code> element</td>
+    <td>1</td>
+    <td>Lighthouse</td>
   </tr>
   <tr>
     <td>meta-description</td>
@@ -185,17 +191,6 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td>structured-data</td>
-    <td>Structured data is valid</td>
-    <td>1</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <th colspan="4">
-      Crawl
-    </th>
-  </tr>
-  <tr>
     <td>http-status-code</td>
     <td>Page has successful HTTP status code</td>
     <td>1</td>
@@ -220,11 +215,6 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <th colspan="4">
-      Mobile
-    </th>
-  </tr>
-  <tr>
     <td>viewport</td>
     <td>Has a <code>&lt;meta name="viewport"&gt;</code> tag with <code>width</code> or <code>initial-scale</code></td>
     <td>1</td>
@@ -241,5 +231,10 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Tap targets are not sized appropriately</td>
     <td>1</td>
     <td>Lighthouse</td>
+  </tr>
+  <tr>
+    <th colspan="4">
+      Content
+    </th>
   </tr>
 </table>
