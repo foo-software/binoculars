@@ -114,12 +114,6 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <td>Lighthouse</td>
   </tr>
   <tr>
-    <td>document-title</td>
-    <td>Document has a <code>&lt;title&gt;</code> element</td>
-    <td>3</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
     <td>html-has-lang</td>
     <td><code>&lt;html&gt;</code> element has a <code>[lang]</code> attribute</td>
     <td>3</td>
