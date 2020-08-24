@@ -110,7 +110,7 @@ Below are metrics we'll pull together and weights to generate a report. Most met
   </tr>
   <tr>
     <th colspan="4">
-      Searchability
+      SEO
     </th>
   </tr>
   <tr>
