@@ -15,47 +15,6 @@ Below are metrics we'll pull together and weights to generate a report. Most met
   </tr>
   <tr>
     <th colspan="4">
-      Performance
-    </th>
-  </tr>
-  <tr>
-    <td>largest-contentful-paint</td>
-    <td>Largest Contentful Paint</td>
-    <td>25</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <td>total-blocking-time</td>
-    <td>Total Blocking Time</td>
-    <td>25</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <td>first-contentful-paint</td>
-    <td>First Contentful Paint</td>
-    <td>15</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <td>interactive</td>
-    <td>Time to Interactive</td>
-    <td>15</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <td>speed-index</td>
-    <td>Speed Index</td>
-    <td>15</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <td>cumulative-layout-shift</td>
-    <td>Cumulative Layout Shift</td>
-    <td>5</td>
-    <td>Lighthouse</td>
-  </tr>
-  <tr>
-    <th colspan="4">
       Accessibility
     </th>
   </tr>
