@@ -61,6 +61,25 @@ export default {
           weight: 1,
           group: 'seo-mobile',
         },
+        {
+          id: 'first-contentful-paint',
+          weight: 15,
+          group: 'metrics',
+        },
+        {
+          id: 'screenshot-thumbnails',
+          weight: 0,
+        },
+        {
+          id: 'render-blocking-resources',
+          weight: 0,
+          group: 'load-opportunities',
+        },
+        {
+          id: 'critical-request-chains',
+          weight: 0,
+          group: 'diagnostics',
+        },
       ],
     },
   },
@@ -72,7 +91,7 @@ export default {
   },
   settings: {
     emulatedFormFactor: 'mobile',
-    onlyCategories: ['searchability', 'performance', 'accessibility'],
+    onlyCategories: ['searchability'],
     throttling: throttling.mobileSlow4G,
     throttlingMethod: 'simulate',
   },

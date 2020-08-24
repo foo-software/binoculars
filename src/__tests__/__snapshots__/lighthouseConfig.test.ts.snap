@@ -10,6 +10,25 @@ Object {
           "id": "viewport",
           "weight": 1,
         },
+        Object {
+          "group": "metrics",
+          "id": "first-contentful-paint",
+          "weight": 15,
+        },
+        Object {
+          "id": "screenshot-thumbnails",
+          "weight": 0,
+        },
+        Object {
+          "group": "load-opportunities",
+          "id": "render-blocking-resources",
+          "weight": 0,
+        },
+        Object {
+          "group": "diagnostics",
+          "id": "critical-request-chains",
+          "weight": 0,
+        },
       ],
       "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
       "title": "Searchability",
@@ -26,8 +45,6 @@ Object {
     "emulatedFormFactor": "mobile",
     "onlyCategories": Array [
       "searchability",
-      "performance",
-      "accessibility",
     ],
     "throttling": Object {
       "cpuSlowdownMultiplier": 4,
