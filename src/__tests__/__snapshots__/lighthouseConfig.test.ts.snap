@@ -2,9 +2,33 @@
 
 exports[`Lighthouse options should match snapshot 1`] = `
 Object {
+  "categories": Object {
+    "searchability": Object {
+      "auditRefs": Array [
+        Object {
+          "group": "seo-mobile",
+          "id": "viewport",
+          "weight": 1,
+        },
+      ],
+      "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
+      "title": "Searchability",
+    },
+  },
   "extends": "lighthouse:default",
+  "groups": Object {
+    "seo-mobile": Object {
+      "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/).",
+      "title": "Mobile Friendly",
+    },
+  },
   "settings": Object {
     "emulatedFormFactor": "mobile",
+    "onlyCategories": Array [
+      "searchability",
+      "performance",
+      "accessibility",
+    ],
     "throttling": Object {
       "cpuSlowdownMultiplier": 4,
       "downloadThroughputKbps": 1474.5600000000002,
