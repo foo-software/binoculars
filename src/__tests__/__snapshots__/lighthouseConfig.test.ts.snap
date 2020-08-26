@@ -320,7 +320,7 @@ Object {
           "weight": 0,
         },
       ],
-      "description": "Ipsum lorem",
+      "description": "Ipsum lorem. [Learn more](https://support.google.com/webmasters/answer/35769).",
       "title": "SEO",
     },
   },
