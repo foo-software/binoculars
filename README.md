@@ -193,7 +193,7 @@ Below are metrics we'll pull together and weights to generate a report. Most met
       </th>
     </tr>
   </table>
-<details>
+</details>
 
 ## Todo
 
