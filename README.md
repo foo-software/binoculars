@@ -199,6 +199,9 @@ Below are metrics we'll pull together and weights to generate a report. Most met
 
 This is a list of todo items in order to launch Binoculars wep pages and the NPM package.
 
+<details>
+  <summary>Expand here to see metrics</summary>
+
 - [ ] Take a final pass at [`auditRefsConfig.js`](./src/auditRefsConfig.js) to make sure we aren't missing any.
 - [ ] SEO category description.
 - [ ] Create a JSON file to list all metrics and groups that will have pages on Foo.
@@ -216,3 +219,4 @@ This is a list of todo items in order to launch Binoculars wep pages and the NPM
 - [ ] Website updates and new page for Binoculars. Create a new audit flow for Binoculars.
 - [ ] GitHub Action
 - [ ] Article
+</details>
