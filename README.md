@@ -191,3 +191,25 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     </th>
   </tr>
 </table>
+
+## Todo
+
+This is a list of todo items in order to launch Binoculars wep pages and the NPM package.
+
+- [ ] Take a final pass at [`auditRefsConfig.js`](./src/auditRefsConfig.js) to make sure we aren't missing any.
+- [ ] SEO category description.
+- [ ] Create a JSON file to list all metrics and groups that will have pages on Foo.
+- [ ] Create JSON files for each page from the above with all content to be rendered. Also create one for the SEO category.
+- [ ] Pages for each metric.
+- [ ] Pages for each group.
+- [ ] Page about SEO.
+- [ ] Define new metrics for new content group and weighting.
+- [ ] Re-evaluate and update weighting.
+- [ ] Create [custom audits](https://github.com/GoogleChrome/lighthouse/tree/master/docs/recipes/custom-audit) for new metrics.
+- [ ] Generate HTML report with updated links and other formatting.
+- [ ] Report upload functionality.
+- [ ] [Integration testing](https://github.com/GoogleChrome/lighthouse/tree/master/docs/recipes/integration-test).
+- [ ] Finalize NPM package.
+- [ ] Website updates and new page for Binoculars. Create a new audit flow for Binoculars.
+- [ ] GitHub Action
+- [ ] Article

@@ -325,12 +325,6 @@ Object {
     },
   },
   "extends": "lighthouse:default",
-  "groups": Object {
-    "seo-mobile": Object {
-      "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/).",
-      "title": "Mobile Friendly",
-    },
-  },
   "settings": Object {
     "emulatedFormFactor": "mobile",
     "onlyCategories": Array [

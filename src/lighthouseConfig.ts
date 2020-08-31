@@ -60,13 +60,6 @@ export default {
       auditRefs: seoAuditRefs,
     },
   },
-  // example custom title and description
-  groups: {
-    'seo-mobile': {
-      title: 'Mobile Friendly',
-      description: `Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/).`,
-    },
-  },
   settings: {
     emulatedFormFactor: 'mobile',
     onlyCategories: ['seo'],
