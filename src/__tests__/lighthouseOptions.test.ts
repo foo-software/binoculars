@@ -1,4 +1,4 @@
-import lighthouseOptions from '../lighthouseOptions';
+import lighthouseOptions from '../config/lighthouseOptions';
 
 describe('Lighthouse options', () => {
   it('should match snapshot', () => {

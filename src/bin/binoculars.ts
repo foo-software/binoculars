@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import lighthousePersist from '@foo-software/lighthouse-persist';
 import meow from 'meow';
-import lighthouseConfig from '../lighthouseConfig';
-import lighthouseOptions from '../lighthouseOptions';
+import lighthouseConfig from '../config/lighthouseConfig';
+import lighthouseOptions from '../config/lighthouseOptions';
 
 const cli = meow();
 const { url } = cli.flags;

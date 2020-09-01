@@ -6766,7 +6766,7 @@
       "title":"Tables and lists",
       "description":"These are opportunities to improve the experience of reading tabular or list data using assistive technology, like a screen reader."
     },
-    "seo-mobile":{
+    "viewport":{
       "title":"Mobile Friendly",
       "description":"Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/)."
     },
