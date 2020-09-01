@@ -202,8 +202,8 @@ This is a list of todo items in order to launch Binoculars wep pages and the NPM
 <details>
   <summary>Expand here to see list</summary>
 
-- [ ] Take a final pass at [`auditRefsConfig.js`](./src/auditRefsConfig.js) to make sure we aren't missing any.
-- [ ] SEO category description.
+- [ x ] Take a final pass at [`auditRefsConfig.js`](./src/auditRefsConfig.js) to make sure we aren't missing any.
+- [ x ] SEO category description.
 - [ ] Create a JSON file to list all metrics and groups that will have pages on Foo.
 - [ ] Create JSON files for each page from the above with all content to be rendered. Also create one for the SEO category.
 - [ ] Pages for each metric.
