@@ -56,7 +56,7 @@ export default {
     seo: {
       title: 'SEO',
       description:
-        'Ipsum lorem. [Learn more](https://support.google.com/webmasters/answer/35769).',
+        'These checks ensure that your page is optimized for search engine results ranking. [Learn more](https://support.google.com/webmasters/answer/35769).',
       auditRefs: seoAuditRefs,
     },
   },
