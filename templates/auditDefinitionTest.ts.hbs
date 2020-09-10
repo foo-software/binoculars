@@ -1,0 +1,7 @@
+import audit{{pascalCase id}} from '../../../config/audits/{{path}}';
+
+describe('{{id}} audit', () => {
+  it('should match snapshot', () => {
+    expect(audit{{pascalCase id}}('en')).toMatchSnapshot();
+  });
+});
