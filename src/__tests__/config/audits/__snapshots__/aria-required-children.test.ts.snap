@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`aria-required-children audit should match snapshot 1`] = `
+Object {
+  "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more](https://web.dev/aria-required-children/).",
+  "title": "Elements with an ARIA \`[role]\` that require children to contain a specific \`[role]\` have all required children.",
+}
+`;

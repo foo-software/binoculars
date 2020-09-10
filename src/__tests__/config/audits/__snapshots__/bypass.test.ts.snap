@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bypass audit should match snapshot 1`] = `
+Object {
+  "description": "Adding ways to bypass repetitive content lets keyboard users navigate the page more efficiently. [Learn more](https://web.dev/bypass/).",
+  "title": "The page contains a heading, skip link, or landmark region",
+}
+`;

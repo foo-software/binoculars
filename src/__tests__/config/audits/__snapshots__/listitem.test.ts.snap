@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listitem audit should match snapshot 1`] = `
+Object {
+  "description": "Screen readers require list items (\`<li>\`) to be contained within a parent \`<ul>\` or \`<ol>\` to be announced properly. [Learn more](https://web.dev/listitem/).",
+  "title": "List items (\`<li>\`) are contained within \`<ul>\` or \`<ol>\` parent elements",
+}
+`;

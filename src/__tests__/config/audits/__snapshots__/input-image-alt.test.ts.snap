@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input-image-alt audit should match snapshot 1`] = `
+Object {
+  "description": "When an image is being used as an \`<input>\` button, providing alternative text can help screen reader users understand the purpose of the button. [Learn more](https://web.dev/input-image-alt/).",
+  "title": "\`<input type=\\"image\\">\` elements have \`[alt]\` text",
+}
+`;

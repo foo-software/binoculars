@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`offscreen-content-hidden audit should match snapshot 1`] = `
+Object {
+  "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn more](https://web.dev/offscreen-content-hidden/).",
+  "title": "Offscreen content is hidden from assistive technology",
+}
+`;

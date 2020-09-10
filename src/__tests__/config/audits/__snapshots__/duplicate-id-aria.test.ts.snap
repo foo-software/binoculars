@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`duplicate-id-aria audit should match snapshot 1`] = `
+Object {
+  "description": "The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).",
+  "title": "ARIA IDs are unique",
+}
+`;

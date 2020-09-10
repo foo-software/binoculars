@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interactive-element-affordance audit should match snapshot 1`] = `
+Object {
+  "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn more](https://web.dev/interactive-element-affordance/).",
+  "title": "Interactive elements indicate their purpose and state",
+}
+`;

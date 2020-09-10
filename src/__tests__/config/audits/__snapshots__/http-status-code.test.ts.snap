@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`http-status-code audit should match snapshot 1`] = `
+Object {
+  "description": "Pages with unsuccessful HTTP status codes may not be indexed properly. [Learn more](https://web.dev/http-status-code/).",
+  "title": "Page has successful HTTP status code",
+}
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`aria-hidden-focus audit should match snapshot 1`] = `
+Object {
+  "description": "Focusable descendents within an \`[aria-hidden=\\"true\\"]\` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn more](https://web.dev/aria-hidden-focus/).",
+  "title": "\`[aria-hidden=\\"true\\"]\` elements do not contain focusable descendents",
+}
+`;

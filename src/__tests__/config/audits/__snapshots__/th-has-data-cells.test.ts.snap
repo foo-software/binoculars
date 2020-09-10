@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`th-has-data-cells audit should match snapshot 1`] = `
+Object {
+  "description": "Screen readers have features to make navigating tables easier. Ensuring table headers always refer to some set of cells may improve the experience for screen reader users. [Learn more](https://web.dev/th-has-data-cells/).",
+  "title": "\`<th>\` elements and elements with \`[role=\\"columnheader\\"/\\"rowheader\\"]\` have data cells they describe.",
+}
+`;

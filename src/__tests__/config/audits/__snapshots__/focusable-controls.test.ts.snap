@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`focusable-controls audit should match snapshot 1`] = `
+Object {
+  "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn more](https://web.dev/focusable-controls/).",
+  "title": "Interactive controls are keyboard focusable",
+}
+`;

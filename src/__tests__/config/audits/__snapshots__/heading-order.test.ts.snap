@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`heading-order audit should match snapshot 1`] = `
+Object {
+  "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://web.dev/heading-order/).",
+  "title": "Heading elements appear in a sequentially-descending order",
+}
+`;

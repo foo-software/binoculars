@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`definition-list audit should match snapshot 1`] = `
+Object {
+  "description": "When definition lists are not properly marked up, screen readers may produce confusing or inaccurate output. [Learn more](https://web.dev/definition-list/).",
+  "title": "\`<dl>\`'s contain only properly-ordered \`<dt>\` and \`<dd>\` groups, \`<script>\`, \`<template>\` or \`<div>\` elements.",
+}
+`;

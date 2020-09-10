@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`aria-hidden-body audit should match snapshot 1`] = `
+Object {
+  "description": "Assistive technologies, like screen readers, work inconsistently when \`aria-hidden=\\"true\\"\` is set on the document \`<body>\`. [Learn more](https://web.dev/aria-hidden-body/).",
+  "title": "\`[aria-hidden=\\"true\\"]\` is not present on the document \`<body>\`",
+}
+`;

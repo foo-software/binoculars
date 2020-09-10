@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`image-alt audit should match snapshot 1`] = `
+Object {
+  "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).",
+  "title": "Image elements have \`[alt]\` attributes",
+}
+`;

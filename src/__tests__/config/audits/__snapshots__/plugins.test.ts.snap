@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`plugins audit should match snapshot 1`] = `
+Object {
+  "description": "Search engines can't index plugin content, and many devices restrict plugins or don't support them. [Learn more](https://web.dev/plugins/).",
+  "title": "Document avoids plugins",
+}
+`;

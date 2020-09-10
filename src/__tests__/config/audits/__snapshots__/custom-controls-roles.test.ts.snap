@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom-controls-roles audit should match snapshot 1`] = `
+Object {
+  "description": "Custom interactive controls have appropriate ARIA roles. [Learn more](https://web.dev/custom-control-roles/).",
+  "title": "Custom controls have ARIA roles",
+}
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`use-landmarks audit should match snapshot 1`] = `
+Object {
+  "description": "Landmark elements (<main>, <nav>, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more](https://web.dev/use-landmarks/).",
+  "title": "HTML5 landmark elements are used to improve navigation",
+}
+`;

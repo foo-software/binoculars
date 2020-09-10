@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`aria-required-attr audit should match snapshot 1`] = `
+Object {
+  "description": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more](https://web.dev/aria-required-attr/).",
+  "title": "\`[role]\`s have all required \`[aria-*]\` attributes",
+}
+`;

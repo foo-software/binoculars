@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom-controls-labels audit should match snapshot 1`] = `
+Object {
+  "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more](https://web.dev/custom-controls-labels/).",
+  "title": "Custom controls have associated labels",
+}
+`;

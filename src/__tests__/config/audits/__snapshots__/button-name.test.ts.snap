@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button-name audit should match snapshot 1`] = `
+Object {
+  "description": "When a button doesn't have an accessible name, screen readers announce it as \\"button\\", making it unusable for users who rely on screen readers. [Learn more](https://web.dev/button-name/).",
+  "title": "Buttons have an accessible name",
+}
+`;
