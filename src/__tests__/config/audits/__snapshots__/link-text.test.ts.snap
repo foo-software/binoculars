@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link-text audit should match snapshot 1`] = `
+Object {
+  "description": "Descriptive link text helps search engines understand your content. [Learn more](https://web.dev/link-text/).",
+  "title": "Links have descriptive text",
+}
+`;
