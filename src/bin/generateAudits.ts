@@ -102,6 +102,6 @@ const audits = [
 ];
 
 for (const audit of audits) {
-  shell.exec(`npm run generate auditDefinition ${audit.name} ${audit.path}`);
+  shell.exec(`npm run generate auditConfig ${audit.name} ${audit.path}`);
   shell.exec('npm run test');
 }

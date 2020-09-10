@@ -1,6 +1,6 @@
 module.exports = plop => {
-  plop.setGenerator('definition', {
-    description: 'Create a definition',
+  plop.setGenerator('config', {
+    description: 'Create a config',
     prompts: [
       {
         type: 'input',
@@ -17,13 +17,13 @@ module.exports = plop => {
       {
         type: 'add',
         path: 'src/config/{{type}}/{{name}}.ts',
-        templateFile: 'templates/standardDefinition.ts.hbs'
+        templateFile: 'templates/standardConfig.ts.hbs'
       },
     ]
   });
 
-  plop.setGenerator('auditDefinition', {
-    description: 'Create an audit definition',
+  plop.setGenerator('auditConfig', {
+    description: 'Create an audit config',
     prompts: [
       {
         type: 'input',
@@ -40,17 +40,17 @@ module.exports = plop => {
       {
         type: 'add',
         path: 'src/@types/lighthouse-audit-{{id}}.d.ts',
-        templateFile: 'templates/auditDefinitionType.ts.hbs'
+        templateFile: 'templates/auditConfigType.ts.hbs'
       },
       {
         type: 'add',
         path: 'src/__tests__/config/audits/{{id}}.test.ts',
-        templateFile: 'templates/auditDefinitionTest.ts.hbs'
+        templateFile: 'templates/auditConfigTest.ts.hbs'
       },
       {
         type: 'add',
         path: 'src/config/audits/{{id}}.ts',
-        templateFile: 'templates/auditDefinition.ts.hbs'
+        templateFile: 'templates/auditConfig.ts.hbs'
       },
     ],
   });
