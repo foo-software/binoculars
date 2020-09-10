@@ -44,12 +44,12 @@ module.exports = plop => {
       },
       {
         type: 'add',
-        path: 'src/__tests__/config/audits/{{path}}.test.ts',
+        path: 'src/__tests__/config/audits/{{id}}.test.ts',
         templateFile: 'templates/auditDefinitionTest.ts.hbs'
       },
       {
         type: 'add',
-        path: 'src/config/audits/{{path}}.ts',
+        path: 'src/config/audits/{{id}}.ts',
         templateFile: 'templates/auditDefinition.ts.hbs'
       },
     ],

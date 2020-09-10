@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accesskeys audit should match snapshot 1`] = `
+Object {
+  "description": "Access keys let users quickly focus a part of the page. For proper navigation, each access key must be unique. [Learn more](https://web.dev/accesskeys/).",
+  "title": "\`[accesskey]\` values are unique",
+}
+`;
