@@ -1,4 +1,6 @@
 import { seoAuditRefs } from './auditRefsConfig';
+import a11yAria from './groups/a11y-aria';
+import seoMobile from './groups/seo-mobile';
 
 // much of this was taken from
 // https://github.com/GoogleChrome/lighthouse/blob/b834427d676dc77e112d124ca42cc588f896950e/lighthouse-core/config/constants.js#L8-L41
@@ -50,7 +52,7 @@ const throttling = {
 // https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md
 // okay, maybe a little different from...
 // https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/perf-config.js
-export default {
+export default (locale: string | undefined | unknown) => ({
   extends: 'lighthouse:default',
   categories: {
     seo: {
@@ -60,10 +62,14 @@ export default {
       auditRefs: seoAuditRefs,
     },
   },
+  groups: {
+    'a11y-aria': a11yAria(locale),
+    'seo-mobile': seoMobile(locale),
+  },
   settings: {
     emulatedFormFactor: 'mobile',
     onlyCategories: ['seo'],
     throttling: throttling.mobileSlow4G,
     throttlingMethod: 'simulate',
   },
-};
+});

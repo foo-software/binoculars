@@ -5,14 +5,14 @@ import lighthouseConfig from '../config/lighthouseConfig';
 import lighthouseOptions from '../config/lighthouseOptions';
 
 const cli = meow();
-const { url } = cli.flags;
+const { url, locale } = cli.flags;
 
 const binoculars = async () => {
   try {
     console.log('Running Lighthouse...');
 
     const { localReport, result } = await lighthousePersist({
-      config: lighthouseConfig,
+      config: lighthouseConfig(locale),
       options: lighthouseOptions,
       outputDirectory: './reports',
       url,
