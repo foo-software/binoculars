@@ -1,2 +1,2 @@
 // imported by `lighthouse-persist`
-declare module 'lighthouse/lighthouse-core/audits/accesskeys';
+declare module 'lighthouse/lighthouse-core/audits/accessibility/accesskeys';
