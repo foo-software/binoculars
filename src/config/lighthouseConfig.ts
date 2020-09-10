@@ -62,7 +62,6 @@ const throttling = {
 // https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md
 // okay, maybe a little different from...
 // https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/perf-config.js
-console.log('seo', seo);
 export default (locale: string | undefined | unknown) => ({
   extends: 'lighthouse:default',
   categories: {
