@@ -7,6 +7,7 @@ import a11yLanguage from './groups/a11y-language';
 import a11yNamesLabels from './groups/a11y-names-labels';
 import a11yNavigation from './groups/a11y-navigation';
 import a11yTablesLists from './groups/a11y-tables-lists';
+import seo from './categories/seo';
 import seoContent from './groups/seo-content';
 import seoCrawl from './groups/seo-crawl';
 import seoMobile from './groups/seo-mobile';
@@ -61,13 +62,12 @@ const throttling = {
 // https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md
 // okay, maybe a little different from...
 // https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/perf-config.js
+console.log('seo', seo);
 export default (locale: string | undefined | unknown) => ({
   extends: 'lighthouse:default',
   categories: {
     seo: {
-      title: 'SEO',
-      description:
-        'These checks ensure that your page is optimized for search engine results ranking. [Learn more](https://support.google.com/webmasters/answer/35769).',
+      ...seo(locale),
       auditRefs: seoAuditRefs,
     },
   },

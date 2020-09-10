@@ -4,9 +4,9 @@ import replaceLinks from '../../helpers/replaceLinks';
 
 export default (locale: string | undefined | unknown = 'en') => ({
   description: replaceLinks(
-    getFormatted(defaultConfig.groups['{{name}}'].description, locale),
+    getFormatted(defaultConfig.categories['seo'].description, locale),
   ),
   title: replaceLinks(
-    getFormatted(defaultConfig.groups['{{name}}'].title, locale),
+    getFormatted(defaultConfig.categories['seo'].title, locale),
   ),
 });

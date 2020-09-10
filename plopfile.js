@@ -6,13 +6,18 @@ module.exports = plop => {
         type: 'input',
         name: 'name',
         message: `What's the name? (ex: "seo-mobile")`
+      },
+      {
+        type: 'input',
+        name: 'type',
+        message: `What type? (ex: "groups")`
       }
     ],
     actions: [
       {
         type: 'add',
-        path: 'src/config/groups/{{name}}.ts',
-        templateFile: 'templates/group.ts.hbs'
+        path: 'src/config/{{type}}/{{name}}.ts',
+        templateFile: 'templates/definition.ts.hbs'
       }
     ]
   });

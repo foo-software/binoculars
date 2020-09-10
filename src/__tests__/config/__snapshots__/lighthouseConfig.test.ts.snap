@@ -320,7 +320,7 @@ Object {
           "weight": 0,
         },
       ],
-      "description": "These checks ensure that your page is optimized for search engine results ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
+      "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
       "title": "SEO",
     },
   },
