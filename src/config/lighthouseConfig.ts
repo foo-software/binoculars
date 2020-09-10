@@ -1,5 +1,14 @@
 import { seoAuditRefs } from './auditRefsConfig';
 import a11yAria from './groups/a11y-aria';
+import a11yAudioVideo from './groups/a11y-audio-video';
+import a11yBestPractices from './groups/a11y-best-practices';
+import a11yColorContrast from './groups/a11y-color-contrast';
+import a11yLanguage from './groups/a11y-language';
+import a11yNamesLabels from './groups/a11y-names-labels';
+import a11yNavigation from './groups/a11y-navigation';
+import a11yTablesLists from './groups/a11y-tables-lists';
+import seoContent from './groups/seo-content';
+import seoCrawl from './groups/seo-crawl';
 import seoMobile from './groups/seo-mobile';
 
 // much of this was taken from
@@ -64,6 +73,15 @@ export default (locale: string | undefined | unknown) => ({
   },
   groups: {
     'a11y-aria': a11yAria(locale),
+    'a11y-audio-video': a11yAudioVideo(locale),
+    'a11y-best-practices': a11yBestPractices(locale),
+    'a11y-color-contrast': a11yColorContrast(locale),
+    'a11y-language': a11yLanguage(locale),
+    'a11y-names-labels': a11yNamesLabels(locale),
+    'a11y-navigation': a11yNavigation(locale),
+    'a11y-tables-lists': a11yTablesLists(locale),
+    'seo-content': seoContent(locale),
+    'seo-crawl': seoCrawl(locale),
     'seo-mobile': seoMobile(locale),
   },
   settings: {
