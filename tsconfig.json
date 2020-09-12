@@ -2,6 +2,9 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "jsx": "react",
     "lib": ["dom", "es2018"],
     "module": "commonjs",
@@ -11,15 +14,12 @@
     "outDir": "./dist",
     "preserveConstEnums": true,
     "removeComments": false,
+    "resolveJsonModule": true,
     "rootDir": "./src",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2018",
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true
+    "target": "es2018"
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts"]
