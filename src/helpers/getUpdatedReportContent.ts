@@ -18,6 +18,7 @@ const hideStyle = ' style="display: none"';
 
 export default (reportContent: string) => {
   let content = reportContent;
+  content = content.replace(/Lighthouse Report/g, 'Binoculars Report');
   content = content.replace(iconRegex, icons);
   content = content.replace(viewerRegex, '');
   content = content.replace(logoPrefix, `${logo}${logoPrefix}${hideStyle}`);
