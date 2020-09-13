@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import getUpdatedReportContent from './helpers/getUpdatedReportContent';
 import lighthousePersist from '@foo-software/lighthouse-persist';
 import lighthouseConfig from './config/lighthouseConfig';
 import lighthouseOptions from './config/lighthouseOptions';
-import replaceLinks from './helpers/replaceLinks';
 
 export default async ({
   locale,
@@ -27,7 +27,7 @@ export default async ({
 
   const reportPath = path.resolve(localReport);
   let reportContent = fs.readFileSync(reportPath, 'utf8');
-  reportContent = replaceLinks(reportContent);
+  reportContent = getUpdatedReportContent(reportContent);
   fs.writeFileSync(reportPath, reportContent);
 
   console.log('Report update complete ✔️');
