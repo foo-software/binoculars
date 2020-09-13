@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`aria-toggle-field-name audit should match snapshot 1`] = `
-Object {
-  "description": "When a toggle field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-toggle-field-name/).",
-  "title": "ARIA toggle fields have accessible names",
-}
-`;

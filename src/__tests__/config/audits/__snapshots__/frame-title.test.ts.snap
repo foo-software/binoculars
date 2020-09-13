@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`frame-title audit should match snapshot 1`] = `
-Object {
-  "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more](https://web.dev/frame-title/).",
-  "title": "\`<frame>\` or \`<iframe>\` elements have a title",
-}
-`;

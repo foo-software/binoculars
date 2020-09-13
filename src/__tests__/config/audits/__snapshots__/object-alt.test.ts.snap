@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`object-alt audit should match snapshot 1`] = `
-Object {
-  "description": "Screen readers cannot translate non-text content. Adding alt text to \`<object>\` elements helps screen readers convey meaning to users. [Learn more](https://web.dev/object-alt/).",
-  "title": "\`<object>\` elements have \`[alt]\` text",
-}
-`;

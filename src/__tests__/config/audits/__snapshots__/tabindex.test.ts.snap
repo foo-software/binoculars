@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`tabindex audit should match snapshot 1`] = `
-Object {
-  "description": "A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. [Learn more](https://web.dev/tabindex/).",
-  "title": "No element has a \`[tabindex]\` value greater than 0",
-}
-`;

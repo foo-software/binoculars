@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`video-description audit should match snapshot 1`] = `
-Object {
-  "description": "Audio descriptions provide relevant information for videos that dialogue cannot, such as facial expressions and scenes. [Learn more](https://web.dev/video-description/).",
-  "title": "\`<video>\` elements contain a \`<track>\` element with \`[kind=\\"description\\"]\`",
-}
-`;

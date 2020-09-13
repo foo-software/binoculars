@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`focus-traps audit should match snapshot 1`] = `
-Object {
-  "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn more](https://web.dev/focus-traps/).",
-  "title": "User focus is not accidentally trapped in a region",
-}
-`;

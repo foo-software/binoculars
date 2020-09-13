@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`aria-roles audit should match snapshot 1`] = `
-Object {
-  "description": "ARIA roles must have valid values in order to perform their intended accessibility functions. [Learn more](https://web.dev/aria-roles/).",
-  "title": "\`[role]\` values are valid",
-}
-`;

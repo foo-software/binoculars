@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`color-contrast audit should match snapshot 1`] = `
-Object {
-  "description": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).",
-  "title": "Background and foreground colors have a sufficient contrast ratio",
-}
-`;

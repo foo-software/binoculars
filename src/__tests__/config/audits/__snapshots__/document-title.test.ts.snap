@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`document-title audit should match snapshot 1`] = `
-Object {
-  "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more](https://web.dev/document-title/).",
-  "title": "Document has a \`<title>\` element",
-}
-`;

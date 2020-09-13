@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`is-crawlable audit should match snapshot 1`] = `
-Object {
-  "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more](https://web.dev/is-crawable/).",
-  "title": "Page isn’t blocked from indexing",
-}
-`;

@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`label audit should match snapshot 1`] = `
-Object {
-  "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more](https://web.dev/label/).",
-  "title": "Form elements have associated labels",
-}
-`;

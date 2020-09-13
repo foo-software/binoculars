@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`aria-required-parent audit should match snapshot 1`] = `
-Object {
-  "description": "Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. [Learn more](https://web.dev/aria-required-parent/).",
-  "title": "\`[role]\`s are contained by their required parent element",
-}
-`;

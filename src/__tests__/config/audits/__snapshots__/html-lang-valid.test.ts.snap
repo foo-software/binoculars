@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`html-lang-valid audit should match snapshot 1`] = `
-Object {
-  "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) helps screen readers announce text properly. [Learn more](https://web.dev/html-lang-valid/).",
-  "title": "\`<html>\` element has a valid value for its \`[lang]\` attribute",
-}
-`;

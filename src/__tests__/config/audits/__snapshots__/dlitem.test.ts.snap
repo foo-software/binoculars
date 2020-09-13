@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`dlitem audit should match snapshot 1`] = `
-Object {
-  "description": "Definition list items (\`<dt>\` and \`<dd>\`) must be wrapped in a parent \`<dl>\` element to ensure that screen readers can properly announce them. [Learn more](https://web.dev/dlitem/).",
-  "title": "Definition list items are wrapped in \`<dl>\` elements",
-}
-`;

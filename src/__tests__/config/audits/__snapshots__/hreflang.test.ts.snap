@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`hreflang audit should match snapshot 1`] = `
-Object {
-  "description": "hreflang links tell search engines what version of a page they should list in search results for a given language or region. [Learn more](https://web.dev/hreflang/).",
-  "title": "Document has a valid \`hreflang\`",
-}
-`;

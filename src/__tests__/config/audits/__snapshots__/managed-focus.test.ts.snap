@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`managed-focus audit should match snapshot 1`] = `
-Object {
-  "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn more](https://web.dev/managed-focus/).",
-  "title": "The user's focus is directed to new content added to the page",
-}
-`;

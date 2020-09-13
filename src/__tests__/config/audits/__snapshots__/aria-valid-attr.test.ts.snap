@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`aria-valid-attr audit should match snapshot 1`] = `
-Object {
-  "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid names. [Learn more](https://web.dev/aria-valid-attr/).",
-  "title": "\`[aria-*]\` attributes are valid and not misspelled",
-}
-`;

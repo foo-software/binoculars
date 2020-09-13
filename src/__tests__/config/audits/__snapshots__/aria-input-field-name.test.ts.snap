@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`aria-input-field-name audit should match snapshot 1`] = `
-Object {
-  "description": "When an input field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-input-field-name/).",
-  "title": "ARIA input fields have accessible names",
-}
-`;

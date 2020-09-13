@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`meta-viewport audit should match snapshot 1`] = `
-Object {
-  "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more](https://web.dev/meta-viewport/).",
-  "title": "\`[user-scalable=\\"no\\"]\` is not used in the \`<meta name=\\"viewport\\">\` element and the \`[maximum-scale]\` attribute is not less than 5.",
-}
-`;

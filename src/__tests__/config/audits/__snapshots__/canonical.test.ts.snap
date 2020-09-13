@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`canonical audit should match snapshot 1`] = `
-Object {
-  "description": "Canonical links suggest which URL to show in search results. [Learn more](https://web.dev/canonical/).",
-  "title": "Document has a valid \`rel=canonical\`",
-}
-`;

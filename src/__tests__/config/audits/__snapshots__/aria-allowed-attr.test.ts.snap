@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`aria-allowed-attr audit should match snapshot 1`] = `
-Object {
-  "description": "Each ARIA \`role\` supports a specific subset of \`aria-*\` attributes. Mismatching these invalidates the \`aria-*\` attributes. [Learn more](https://web.dev/aria-allowed-attr/).",
-  "title": "\`[aria-*]\` attributes match their roles",
-}
-`;

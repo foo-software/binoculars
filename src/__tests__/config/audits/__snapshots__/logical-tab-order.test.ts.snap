@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`logical-tab-order audit should match snapshot 1`] = `
-Object {
-  "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more](https://web.dev/logical-tab-order/).",
-  "title": "The page has a logical tab order",
-}
-`;

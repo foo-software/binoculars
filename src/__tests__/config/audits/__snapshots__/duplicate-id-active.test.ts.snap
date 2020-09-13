@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`duplicate-id-active audit should match snapshot 1`] = `
-Object {
-  "description": "All focusable elements must have a unique \`id\` to ensure that they're visible to assistive technologies. [Learn more](https://web.dev/duplicate-id-active/).",
-  "title": "\`[id]\` attributes on active, focusable elements are unique",
-}
-`;

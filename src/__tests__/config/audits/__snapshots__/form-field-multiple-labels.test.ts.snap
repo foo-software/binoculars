@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`form-field-multiple-labels audit should match snapshot 1`] = `
-Object {
-  "description": "Form fields with multiple labels can be confusingly announced by assistive technologies like screen readers which use either the first, the last, or all of the labels. [Learn more](https://web.dev/form-field-multiple-labels/).",
-  "title": "No form fields have multiple labels",
-}
-`;

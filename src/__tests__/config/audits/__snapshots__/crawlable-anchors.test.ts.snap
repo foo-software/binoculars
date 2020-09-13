@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`crawlable-anchors audit should match snapshot 1`] = `
-Object {
-  "description": "Search engines may use \`href\` attributes on links to crawl websites. Ensure that the \`href\` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn More](https://support.google.com/webmasters/answer/9112205)",
-  "title": "Links are crawlable",
-}
-`;

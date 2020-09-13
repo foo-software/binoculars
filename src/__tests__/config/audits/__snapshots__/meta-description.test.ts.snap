@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`meta-description audit should match snapshot 1`] = `
-Object {
-  "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more](https://web.dev/meta-description/).",
-  "title": "Document has a meta description",
-}
-`;
