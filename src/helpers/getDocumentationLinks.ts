@@ -1,4 +1,4 @@
-const LIGHTHOUSE_DOCUMENTATION_WEBSITE = 'https://web.dev';
+export const LIGHTHOUSE_DOCUMENTATION_WEBSITE = 'https://web.dev';
 const regexMarkdownLink = /\[([^[]+)\]\((.*)\)/;
 const regexMarkdownLinks = /(?:__|[*#])|\[(.*?)\]\(.*?\)/gm;
 
