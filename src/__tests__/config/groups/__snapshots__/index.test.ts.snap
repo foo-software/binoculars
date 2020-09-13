@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`groups config getA11yAria() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader.",
+  "title": "ARIA",
+}
+`;
+
+exports[`groups config getA11yAudioVideo() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or vision impairments.",
+  "title": "Audio and video",
+}
+`;
+
+exports[`groups config getA11yBestPractices() should match snapshot 1`] = `
+Object {
+  "description": "These items highlight common accessibility best practices.",
+  "title": "Best practices",
+}
+`;
+
+exports[`groups config getA11yColorContrast() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to improve the legibility of your content.",
+  "title": "Contrast",
+}
+`;
+
+exports[`groups config getA11yLanguage() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to improve the interpretation of your content by users in different locales.",
+  "title": "Internationalization and localization",
+}
+`;
+
+exports[`groups config getA11yNamesLabels() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to improve the semantics of the controls in your application. This may enhance the experience for users of assistive technology, like a screen reader.",
+  "title": "Names and labels",
+}
+`;
+
+exports[`groups config getA11yNavigation() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to improve keyboard navigation in your application.",
+  "title": "Navigation",
+}
+`;
+
+exports[`groups config getA11yTablesLists() should match snapshot 1`] = `
+Object {
+  "description": "These are opportunities to improve the experience of reading tabular or list data using assistive technology, like a screen reader.",
+  "title": "Tables and lists",
+}
+`;
+
+exports[`groups config getSeoContent() should match snapshot 1`] = `
+Object {
+  "description": "Format your HTML in a way that enables crawlers to better understand your app’s content.",
+  "title": "Content Best Practices",
+}
+`;
+
+exports[`groups config getSeoCrawl() should match snapshot 1`] = `
+Object {
+  "description": "To appear in search results, crawlers need access to your app.",
+  "title": "Crawling and Indexing",
+}
+`;
+
+exports[`groups config getSeoMobile() should match snapshot 1`] = `
+Object {
+  "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/).",
+  "title": "Mobile Friendly",
+}
+`;
