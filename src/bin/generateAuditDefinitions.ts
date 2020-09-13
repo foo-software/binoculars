@@ -4,29 +4,32 @@ import fs from 'fs';
 import path from 'path';
 import getDocumentationLinks from '../helpers/getDocumentationLinks';
 import getDocumentationElements from '../helpers/getDocumentationElements';
-import * as audits from '../config/audits';
+// import * as audits from '../config/audits';
+import * as categories from '../config/categories';
+import * as groups from '../config/groups';
 
-interface Audit {
+interface DefinitionCollection {
   [key: string]: any;
-}
-
-const auditColletion: Audit = audits;
-const urls: Array<string> = [];
-
-for (const key in auditColletion) {
-  const { description } = auditColletion[key]();
-  const descriptionLinks = getDocumentationLinks(description);
-
-  if (descriptionLinks.length) {
-    urls.push(...descriptionLinks);
-  }
 }
 
 const definitionPath = path.resolve('src/definitions');
 const definitionIndexPath = path.resolve('src/definitions/index.ts');
 const glossaryPath = path.resolve('src/glossary.ts');
 
-const generateAuditDefinitions = async () => {
+const generateAuditDefinitions = async (
+  definitionCollection: DefinitionCollection,
+) => {
+  const urls: Array<string> = [];
+
+  for (const key in definitionCollection) {
+    const { description } = definitionCollection[key]();
+    const descriptionLinks = getDocumentationLinks(description);
+
+    if (descriptionLinks.length) {
+      urls.push(...descriptionLinks);
+    }
+  }
+
   for (const url of urls) {
     const parts = url.split('/');
     const name = parts[parts.length - 2];
@@ -61,4 +64,8 @@ const generateAuditDefinitions = async () => {
   }
 };
 
-generateAuditDefinitions();
+(async () => {
+  await generateAuditDefinitions(audits);
+  await generateAuditDefinitions(categories);
+  await generateAuditDefinitions(groups);
+})();

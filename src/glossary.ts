@@ -62,7 +62,6 @@ export const definitions = [
   'video-description',
   'viewport',
   'visual-order-follows-dom',
-  // replace me
 ];
 
 export const groupGlossary = [
