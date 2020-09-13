@@ -16,7 +16,7 @@ const definitionPath = path.resolve('src/definitions');
 const definitionIndexPath = path.resolve('src/definitions/index.ts');
 const glossaryPath = path.resolve('src/glossary.ts');
 
-const generateAuditDefinitions = async (
+const generateDefinitions = async (
   definitionCollection: DefinitionCollection,
 ) => {
   const urls: Array<string> = [];
@@ -65,7 +65,7 @@ const generateAuditDefinitions = async (
 };
 
 (async () => {
-  await generateAuditDefinitions(audits);
-  await generateAuditDefinitions(categories);
-  await generateAuditDefinitions(groups);
+  await generateDefinitions(audits);
+  await generateDefinitions(categories);
+  await generateDefinitions(groups);
 })();

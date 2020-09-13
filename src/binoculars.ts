@@ -1,6 +1,9 @@
+import fs from 'fs';
+import path from 'path';
 import lighthousePersist from '@foo-software/lighthouse-persist';
 import lighthouseConfig from './config/lighthouseConfig';
 import lighthouseOptions from './config/lighthouseOptions';
+import replaceLinks from './helpers/replaceLinks';
 
 export default async ({
   locale,
@@ -11,14 +14,23 @@ export default async ({
 }) => {
   console.log('Running Lighthouse...');
 
-  const { localReport, result } = await lighthousePersist({
+  const { localReport } = await lighthousePersist({
     config: lighthouseConfig(locale),
     options: lighthouseOptions,
     outputDirectory: './reports',
     url,
   });
 
-  console.log('Lighthouse audit complete ✔️', result);
+  console.log('Lighthouse audit complete ✔️');
 
-  console.log('report path', localReport);
+  console.log('Updating report...');
+
+  const reportPath = path.resolve(localReport);
+  let reportContent = fs.readFileSync(reportPath, 'utf8');
+  reportContent = replaceLinks(reportContent);
+  fs.writeFileSync(reportPath, reportContent);
+
+  console.log('Report update complete ✔️');
+
+  console.log('report path', reportPath);
 };
