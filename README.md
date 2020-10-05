@@ -206,7 +206,7 @@ This is a list of todo items in order to launch Binoculars wep pages and the NPM
 - [x] SEO category description.
 - [x] Create a JSON file to list all metrics and groups that will have pages on Foo.
 - [x] Create JSON files for each page from the above with all content to be rendered. Also create one for the SEO category.
-  - [ ] Create a "definitions" directory. Utilize Puppeteer to get content for all definitions and append title and description from `config/audits`.
+  - [x] Create a "definitions" directory. Utilize Puppeteer to get content for all definitions and append title and description from `config/audits`.
 - [ ] Pages for each metric.
 - [ ] Pages for each group.
 - [ ] Page about SEO.
