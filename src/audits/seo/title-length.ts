@@ -4,7 +4,7 @@ export const UIStrings = {
   title: 'Title should be between 60 - 70 characters',
   failureTitle: 'Title is not between 60 - 70 characters',
   description:
-    'Titles identify a descriptive summary of a page and should have the right amount of content for search engines to parse.',
+    'A title defines a descriptive summary of a page and should have the right amount of content for search engines to parse.',
   explanation: 'Title text is missing or empty.',
 };
 

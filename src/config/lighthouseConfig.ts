@@ -7,6 +7,7 @@ import a11yLanguage from './groups/a11y-language';
 import a11yNamesLabels from './groups/a11y-names-labels';
 import a11yNavigation from './groups/a11y-navigation';
 import a11yTablesLists from './groups/a11y-tables-lists';
+import DescriptionLengthAudit from '../audits/seo/description-length';
 import meaningfulContent from './groups/meaningful-content';
 import seo from './categories/seo';
 import seoContent from './groups/seo-content';
@@ -67,7 +68,7 @@ const throttling = {
 // https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/perf-config.js
 export default (locale: string | undefined | unknown) => ({
   extends: 'lighthouse:default',
-  audits: [TitleLengthAudit],
+  audits: [DescriptionLengthAudit, TitleLengthAudit],
   categories: {
     seo: {
       ...seo(locale),

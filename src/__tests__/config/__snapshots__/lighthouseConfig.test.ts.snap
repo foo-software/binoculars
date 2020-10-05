@@ -4,6 +4,7 @@ exports[`Lighthouse options should match snapshot 1`] = `
 Object {
   "audits": Array [
     [Function],
+    [Function],
   ],
   "categories": Object {
     "seo": Object {
@@ -325,6 +326,11 @@ Object {
         Object {
           "group": "meaningful-content",
           "id": "title-length",
+          "weight": 1,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "description-length",
           "weight": 1,
         },
       ],
