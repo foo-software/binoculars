@@ -8,6 +8,8 @@ import a11yNamesLabels from './groups/a11y-names-labels';
 import a11yNavigation from './groups/a11y-navigation';
 import a11yTablesLists from './groups/a11y-tables-lists';
 import DescriptionLengthAudit from '../audits/seo/description-length';
+import HeadingElementsGatherer from '../gatherers/heading-elements';
+import HeadingsAudit from '../audits/seo/headings';
 import meaningfulContent from './groups/meaningful-content';
 import seo from './categories/seo';
 import seoContent from './groups/seo-content';
@@ -68,7 +70,7 @@ const throttling = {
 // https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/perf-config.js
 export default (locale: string | undefined | unknown) => ({
   extends: 'lighthouse:default',
-  audits: [DescriptionLengthAudit, TitleLengthAudit],
+  audits: [DescriptionLengthAudit, HeadingsAudit, TitleLengthAudit],
   categories: {
     seo: {
       ...seo(locale),
@@ -92,7 +94,7 @@ export default (locale: string | undefined | unknown) => ({
   passes: [
     {
       passName: 'defaultPass',
-      gatherers: [TitleElementGatherer],
+      gatherers: [HeadingElementsGatherer, TitleElementGatherer],
     },
   ],
   settings: {

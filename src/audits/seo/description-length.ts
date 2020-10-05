@@ -1,7 +1,8 @@
 import { Audit } from 'lighthouse';
+import AuditScore from '../../interfaces/AuditScore';
 
 export const UIStrings = {
-  title: 'Description should be between 100 - 160 characters',
+  title: 'Description Length',
   failureTitle: 'Description is not between 100 - 160 characters',
   description:
     'A description provides an extended summary of a page and should have the right amount of content for search engines to parse.',
@@ -19,7 +20,7 @@ export default class DescriptionLength extends Audit {
     };
   }
 
-  static audit(artifacts: any) {
+  static audit(artifacts: any): AuditScore {
     const metaDescription = artifacts.MetaElements.find(
       (meta: any) => meta.name === 'description',
     );

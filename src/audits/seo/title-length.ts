@@ -1,7 +1,8 @@
 import { Audit } from 'lighthouse';
+import AuditScore from '../../interfaces/AuditScore';
 
 export const UIStrings = {
-  title: 'Title should be between 60 - 70 characters',
+  title: 'Title Length',
   failureTitle: 'Title is not between 60 - 70 characters',
   description:
     'A title defines a descriptive summary of a page and should have the right amount of content for search engines to parse.',
@@ -19,13 +20,13 @@ export default class TitleLength extends Audit {
     };
   }
 
-  static audit(artifacts: any) {
+  static audit(artifacts: any): AuditScore {
     const title = artifacts.TitleElement;
 
     if (!title || !title.text) {
       return {
-        score: 0,
         explanation: UIStrings.explanation,
+        score: 0,
       };
     }
 

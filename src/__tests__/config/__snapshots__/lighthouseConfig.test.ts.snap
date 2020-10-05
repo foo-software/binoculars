@@ -5,6 +5,7 @@ Object {
   "audits": Array [
     [Function],
     [Function],
+    [Function],
   ],
   "categories": Object {
     "seo": Object {
@@ -333,6 +334,11 @@ Object {
           "id": "description-length",
           "weight": 1,
         },
+        Object {
+          "group": "meaningful-content",
+          "id": "headings",
+          "weight": 2,
+        },
       ],
       "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Binoculars does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
       "title": "SEO",
@@ -392,6 +398,7 @@ Object {
   "passes": Array [
     Object {
       "gatherers": Array [
+        [Function],
         [Function],
       ],
       "passName": "defaultPass",

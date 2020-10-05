@@ -326,4 +326,9 @@ export const seoAuditRefs = [
     group: 'meaningful-content',
     weight: 1,
   },
+  {
+    id: 'headings',
+    group: 'meaningful-content',
+    weight: 2,
+  },
 ];
