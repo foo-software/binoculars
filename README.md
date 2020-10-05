@@ -192,12 +192,48 @@ Below are metrics we'll pull together and weights to generate a report. Most met
         Content
       </th>
     </tr>
+    <tr>
+      <td>title-length</td>
+      <td>Title should be between 60 - 70 characters</td>
+      <td>1</td>
+      <td>Binoculars</td>
+    </tr>
+    <tr>
+      <td>description-length</td>
+      <td>Descriptions should be between 100 - 160 characters</td>
+      <td>1</td>
+      <td>Binoculars</td>
+    </tr>
+    <tr>
+      <td>keywords</td>
+      <td>Keyword phrases of at least 2 words should exist in the title, description and at least twice in the content of the page</td>
+      <td>3</td>
+      <td>Binoculars</td>
+    </tr>
+    <tr>
+      <td>headings</td>
+      <td>Has at least 1 <code>&lt;h1&gt;</code> tag and 1 <code>&lt;h2&gt;</code> tag</td>
+      <td>2</td>
+      <td>Binoculars</td>
+    </tr>
+    <tr>
+      <td>meaningful-text</td>
+      <td>Has at least 300 characters</td>
+      <td>3</td>
+      <td>Binoculars</td>
+    </tr>
+    <tr>
+      <td>meaningful-tag-structure</td>
+      <td>Has at least 2 different informational content tags of the following types: <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;table&gt;</code></td>
+      <td>2</td>
+      <td>Binoculars</td>
+    </tr>
   </table>
 </details>
 
 ## Todo
 
-This is a list of todo items in order to launch Binoculars wep pages and the NPM package.
+This is a list of todo items in order to launch Binoculars web pages and the NPM package.
 
 <details>
   <summary>Expand here to see list</summary>
