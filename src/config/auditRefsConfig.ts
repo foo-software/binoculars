@@ -315,4 +315,10 @@ export const seoAuditRefs = [
     id: 'use-landmarks',
     weight: 0,
   },
+  // custom Binoculars content group
+  {
+    id: 'title-length',
+    group: 'meaningful-content',
+    weight: 1,
+  },
 ];

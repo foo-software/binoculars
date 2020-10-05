@@ -2,6 +2,9 @@
 
 exports[`Lighthouse options should match snapshot 1`] = `
 Object {
+  "audits": Array [
+    [Function],
+  ],
   "categories": Object {
     "seo": Object {
       "auditRefs": Array [
@@ -319,6 +322,11 @@ Object {
           "id": "use-landmarks",
           "weight": 0,
         },
+        Object {
+          "group": "meaningful-content",
+          "id": "title-length",
+          "weight": 1,
+        },
       ],
       "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Binoculars does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
       "title": "SEO",
@@ -358,6 +366,10 @@ Object {
       "description": "These are opportunities to improve the experience of reading tabular or list data using assistive technology, like a screen reader.",
       "title": "Tables and lists",
     },
+    "meaningful-content": Object {
+      "description": "Use keywords and semantic HTML to establish meaningful content.",
+      "title": "Meaningful Content",
+    },
     "seo-content": Object {
       "description": "Format your HTML in a way that enables crawlers to better understand your app’s content.",
       "title": "Content Best Practices",
@@ -371,6 +383,14 @@ Object {
       "title": "Mobile Friendly",
     },
   },
+  "passes": Array [
+    Object {
+      "gatherers": Array [
+        [Function],
+      ],
+      "passName": "defaultPass",
+    },
+  ],
   "settings": Object {
     "emulatedFormFactor": "mobile",
     "onlyCategories": Array [

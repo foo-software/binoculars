@@ -7,10 +7,13 @@ import a11yLanguage from './groups/a11y-language';
 import a11yNamesLabels from './groups/a11y-names-labels';
 import a11yNavigation from './groups/a11y-navigation';
 import a11yTablesLists from './groups/a11y-tables-lists';
+import meaningfulContent from './groups/meaningful-content';
 import seo from './categories/seo';
 import seoContent from './groups/seo-content';
 import seoCrawl from './groups/seo-crawl';
 import seoMobile from './groups/seo-mobile';
+import TitleElementGatherer from '../gatherers/title-element';
+import TitleLengthAudit from '../audits/seo/title-length';
 
 // much of this was taken from
 // https://github.com/GoogleChrome/lighthouse/blob/b834427d676dc77e112d124ca42cc588f896950e/lighthouse-core/config/constants.js#L8-L41
@@ -64,6 +67,7 @@ const throttling = {
 // https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/perf-config.js
 export default (locale: string | undefined | unknown) => ({
   extends: 'lighthouse:default',
+  audits: [TitleLengthAudit],
   categories: {
     seo: {
       ...seo(locale),
@@ -79,10 +83,17 @@ export default (locale: string | undefined | unknown) => ({
     'a11y-names-labels': a11yNamesLabels(locale),
     'a11y-navigation': a11yNavigation(locale),
     'a11y-tables-lists': a11yTablesLists(locale),
+    'meaningful-content': meaningfulContent(),
     'seo-content': seoContent(locale),
     'seo-crawl': seoCrawl(locale),
     'seo-mobile': seoMobile(locale),
   },
+  passes: [
+    {
+      passName: 'defaultPass',
+      gatherers: [TitleElementGatherer],
+    },
+  ],
   settings: {
     emulatedFormFactor: 'mobile',
     onlyCategories: ['seo'],

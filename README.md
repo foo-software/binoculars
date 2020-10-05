@@ -189,7 +189,7 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     </tr>
     <tr>
       <th colspan="4">
-        Content
+        Meaningful Content
       </th>
     </tr>
     <tr>
@@ -245,7 +245,7 @@ This is a list of todo items in order to launch Binoculars web pages and the NPM
   - [x] Create a "definitions" directory. Utilize Puppeteer to get content for all definitions and append title and description from `config/audits`.
 - [ ] Pages for each metric.
 - [ ] Page about SEO.
-- [ ] Define new metrics for new content group and weighting.
+- [x] Define new metrics for new content group and weighting.
 - [ ] Re-evaluate and update weighting.
 - [ ] Create [custom audits](https://github.com/GoogleChrome/lighthouse/tree/master/docs/recipes/custom-audit) for new metrics.
 - [ ] Generate HTML report with updated links and other formatting.
