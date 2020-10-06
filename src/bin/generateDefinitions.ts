@@ -2,27 +2,22 @@
 import camelcase from 'camelcase';
 import fs from 'fs';
 import path from 'path';
+import Collection from '../interfaces/Collection';
 import getDocumentationLinks from '../helpers/getDocumentationLinks';
 import getDocumentationElements from '../helpers/getDocumentationElements';
 import * as audits from '../config/audits/lighthouse';
 import * as categories from '../config/categories';
 import * as groups from '../config/groups';
 
-interface DefinitionCollection {
-  [key: string]: any;
-}
-
 const definitionPath = path.resolve('src/definitions');
 const definitionIndexPath = path.resolve('src/definitions/index.ts');
 const glossaryPath = path.resolve('src/glossary.ts');
 
-const generateDefinitions = async (
-  definitionCollection: DefinitionCollection,
-) => {
+const generateDefinitions = async (Collection: Collection) => {
   const urls: Array<string> = [];
 
-  for (const key in definitionCollection) {
-    const { description } = definitionCollection[key]();
+  for (const key in Collection) {
+    const { description } = Collection[key]();
     const descriptionLinks = getDocumentationLinks(description);
 
     if (descriptionLinks.length) {

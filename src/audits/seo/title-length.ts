@@ -5,10 +5,9 @@ export const MAX_TEXT_LENGTH = 70;
 export const MIN_TEXT_LENGTH = 50;
 
 export const UIStrings = {
-  title: 'Title length',
+  title: 'Title length is appropriate',
   failureTitle: `Title is not between ${MIN_TEXT_LENGTH} - ${MAX_TEXT_LENGTH} characters`,
-  description:
-    'A title defines a descriptive summary of a page and should have the right amount of content for search engines to parse.',
+  description: `A title defines a descriptive summary of a page and should have the right amount of content for search engines to parse. Title should be between ${MIN_TEXT_LENGTH} - ${MAX_TEXT_LENGTH} characters.`,
   explanation: 'Title text is missing or empty.',
 };
 

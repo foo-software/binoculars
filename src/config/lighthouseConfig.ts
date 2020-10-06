@@ -10,6 +10,7 @@ import a11yTablesLists from './groups/a11y-tables-lists';
 import DescriptionLengthAudit from '../audits/seo/description-length';
 import ElementsGatherer from '../gatherers/elements';
 import HeadingsAudit from '../audits/seo/headings';
+import KeywordsAudit from '../audits/seo/keywords';
 import meaningfulContent from './groups/meaningful-content';
 import MeaningfulTagStructureAudit from '../audits/seo/meaningful-tag-structure';
 import MeaningfulTextAudit from '../audits/seo/meaningful-text';
@@ -75,6 +76,7 @@ export default (locale: string | undefined | unknown) => ({
   audits: [
     DescriptionLengthAudit,
     HeadingsAudit,
+    KeywordsAudit,
     MeaningfulTagStructureAudit,
     MeaningfulTextAudit,
     TitleLengthAudit,

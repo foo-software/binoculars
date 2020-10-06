@@ -1,6 +1,6 @@
 import { getFormatted } from 'lighthouse/lighthouse-core/lib/i18n/i18n';
 import InputImageAlt from 'lighthouse/lighthouse-core/audits/accessibility/input-image-alt';
-import replaceLinks from '../../helpers/replaceLinks';
+import replaceLinks from '../../../helpers/replaceLinks';
 
 export default (locale: string | undefined | unknown = 'en') => {
   const { description, title } = InputImageAlt.meta;

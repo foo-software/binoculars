@@ -5,10 +5,9 @@ import AuditScore from '../../interfaces/AuditScore';
 export const MIN_TEXT_LENGTH = 300;
 
 export const UIStrings = {
-  title: 'Meaningful textual content',
+  title: 'Has sufficient, meaningful text content',
   failureTitle: `Document body does not have at least ${MIN_TEXT_LENGTH} characters`,
-  description:
-    'A minimal amount of textual content is necessary for search engines to pickup.',
+  description: `A minimal amount of textual content is necessary for search engines to pickup. Document body should have at least ${MIN_TEXT_LENGTH} characters.`,
 };
 
 export default class MeaningfulText extends Audit {

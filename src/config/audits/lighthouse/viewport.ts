@@ -1,6 +1,6 @@
 import { getFormatted } from 'lighthouse/lighthouse-core/lib/i18n/i18n';
 import Viewport from 'lighthouse/lighthouse-core/audits/viewport';
-import replaceLinks from '../../helpers/replaceLinks';
+import replaceLinks from '../../../helpers/replaceLinks';
 
 export default (locale: string | undefined | unknown = 'en') => {
   const { description, title } = Viewport.meta;

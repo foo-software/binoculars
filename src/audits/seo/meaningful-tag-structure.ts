@@ -5,10 +5,9 @@ import AuditScore from '../../interfaces/AuditScore';
 const MIN_DIVERSITY = 2;
 
 export const UIStrings = {
-  title: 'Meaningful tag structure',
-  failureTitle: `Does not have at least ${MIN_DIVERSITY} different informational HTML tags of the following types: p, li, img, table`,
-  description:
-    'Semantic HTML with a variety of tags defining content will improve signaling to search engines.',
+  title: 'Has a meaningful tag structure',
+  failureTitle: `Does not have at least ${MIN_DIVERSITY} different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\``,
+  description: `Semantic HTML with a variety of tags defining content will improve signaling to search engines. should have at least ${MIN_DIVERSITY} different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\``,
 };
 
 export default class MeaningfulTagStructure extends Audit {

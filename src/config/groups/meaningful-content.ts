@@ -1,6 +1,6 @@
 // @TODO support a `locale` argument and translation
 export default () => ({
   description:
-    'Use keywords and semantic HTML to establish meaningful content.',
+    'Use keywords, semantic HTML and the right amount of text to establish meaningful content.',
   title: 'Meaningful Content',
 });

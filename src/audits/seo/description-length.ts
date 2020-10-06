@@ -5,10 +5,9 @@ export const MAX_TEXT_LENGTH = 160;
 export const MIN_TEXT_LENGTH = 100;
 
 export const UIStrings = {
-  title: 'Description length',
+  title: 'Description length is appropriate',
   failureTitle: `Description is not between ${MIN_TEXT_LENGTH} - ${MAX_TEXT_LENGTH} characters`,
-  description:
-    'A description provides an extended summary of a page and should have the right amount of content for search engines to parse.',
+  description: `A description provides an extended summary of a page and should have the right amount of content for search engines to parse. Description should be between ${MIN_TEXT_LENGTH} - ${MAX_TEXT_LENGTH} characters`,
   explanation: 'Description text is missing or empty.',
 };
 

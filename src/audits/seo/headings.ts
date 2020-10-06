@@ -3,8 +3,8 @@ import { ElementsInterface } from '../../gatherers/elements';
 import AuditScore from '../../interfaces/AuditScore';
 
 export const UIStrings = {
-  title: 'Headings',
-  failureTitle: 'Does not have both h1 and h2 tags',
+  title: 'Has `<h1>` and `<h2>` headings',
+  failureTitle: 'Does not have both `<h1>` and `<h2>` headings',
   description:
     'Headings are important in signaling a hierarchy of content to the search engine.',
 };
