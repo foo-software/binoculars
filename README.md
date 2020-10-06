@@ -194,7 +194,7 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     </tr>
     <tr>
       <td>title-length</td>
-      <td>Title should be between 60 - 70 characters</td>
+      <td>Title should be between 50 - 70 characters</td>
       <td>1</td>
       <td>Binoculars</td>
     </tr>

@@ -1,9 +1,12 @@
 import { Audit } from 'lighthouse';
 import AuditScore from '../../interfaces/AuditScore';
 
+export const MAX_TEXT_LENGTH = 160;
+export const MIN_TEXT_LENGTH = 100;
+
 export const UIStrings = {
-  title: 'Description Length',
-  failureTitle: 'Description is not between 100 - 160 characters',
+  title: 'Description length',
+  failureTitle: `Description is not between ${MIN_TEXT_LENGTH} - ${MAX_TEXT_LENGTH} characters`,
   description:
     'A description provides an extended summary of a page and should have the right amount of content for search engines to parse.',
   explanation: 'Description text is missing or empty.',
@@ -36,7 +39,10 @@ export default class DescriptionLength extends Audit {
 
     const trimmedDescriptionLength = description.trim().length;
 
-    if (trimmedDescriptionLength < 100 || trimmedDescriptionLength > 160) {
+    if (
+      trimmedDescriptionLength < MIN_TEXT_LENGTH ||
+      trimmedDescriptionLength > MAX_TEXT_LENGTH
+    ) {
       return {
         score: 0,
       };

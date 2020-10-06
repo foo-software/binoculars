@@ -1,9 +1,12 @@
 import { Audit } from 'lighthouse';
 import AuditScore from '../../interfaces/AuditScore';
 
+export const MAX_TEXT_LENGTH = 70;
+export const MIN_TEXT_LENGTH = 50;
+
 export const UIStrings = {
-  title: 'Title Length',
-  failureTitle: 'Title is not between 60 - 70 characters',
+  title: 'Title length',
+  failureTitle: `Title is not between ${MIN_TEXT_LENGTH} - ${MAX_TEXT_LENGTH} characters`,
   description:
     'A title defines a descriptive summary of a page and should have the right amount of content for search engines to parse.',
   explanation: 'Title text is missing or empty.',
@@ -32,7 +35,10 @@ export default class TitleLength extends Audit {
 
     const trimmedTitleLength = title.text.trim().length;
 
-    if (trimmedTitleLength < 60 || trimmedTitleLength > 70) {
+    if (
+      trimmedTitleLength < MIN_TEXT_LENGTH ||
+      trimmedTitleLength > MAX_TEXT_LENGTH
+    ) {
       return {
         score: 0,
       };

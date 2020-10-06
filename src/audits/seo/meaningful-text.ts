@@ -2,17 +2,19 @@ import { Audit } from 'lighthouse';
 import { ElementsInterface } from '../../gatherers/elements';
 import AuditScore from '../../interfaces/AuditScore';
 
+export const MIN_TEXT_LENGTH = 300;
+
 export const UIStrings = {
-  title: 'Headings',
-  failureTitle: 'Does not have both h1 and h2 tags',
+  title: 'Meaningful textual content',
+  failureTitle: `Document body does not have at least ${MIN_TEXT_LENGTH} characters`,
   description:
-    'Headings are important in signaling a hierarchy of content to the search engine.',
+    'A minimal amount of textual content is necessary for search engines to pickup.',
 };
 
-export default class Headings extends Audit {
+export default class MeaningfulText extends Audit {
   static get meta() {
     return {
-      id: 'headings',
+      id: 'meaningful-text',
       title: UIStrings.title,
       failureTitle: UIStrings.failureTitle,
       description: UIStrings.description,
@@ -21,9 +23,12 @@ export default class Headings extends Audit {
   }
 
   static audit(artifacts: { Elements: ElementsInterface }): AuditScore {
-    const elements = artifacts.Elements;
+    const {
+      body: [body],
+    } = artifacts.Elements;
+
     return {
-      score: elements.h1.length && elements.h2.length && 1,
+      score: !body || !body.text || body.text.length < MIN_TEXT_LENGTH ? 0 : 1,
     };
   }
 }
