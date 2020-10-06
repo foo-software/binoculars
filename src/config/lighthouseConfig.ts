@@ -11,6 +11,7 @@ import DescriptionLengthAudit from '../audits/seo/description-length';
 import ElementsGatherer from '../gatherers/elements';
 import HeadingsAudit from '../audits/seo/headings';
 import meaningfulContent from './groups/meaningful-content';
+import MeaningfulTagStructureAudit from '../audits/seo/meaningful-tag-structure';
 import MeaningfulTextAudit from '../audits/seo/meaningful-text';
 import seo from './categories/seo';
 import seoContent from './groups/seo-content';
@@ -74,6 +75,7 @@ export default (locale: string | undefined | unknown) => ({
   audits: [
     DescriptionLengthAudit,
     HeadingsAudit,
+    MeaningfulTagStructureAudit,
     MeaningfulTextAudit,
     TitleLengthAudit,
   ],
