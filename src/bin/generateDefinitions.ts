@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import getDocumentationLinks from '../helpers/getDocumentationLinks';
 import getDocumentationElements from '../helpers/getDocumentationElements';
-import * as audits from '../config/audits';
+import * as audits from '../config/audits/lighthouse';
 import * as categories from '../config/categories';
 import * as groups from '../config/groups';
 
