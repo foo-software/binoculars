@@ -69,7 +69,6 @@ export default class Elements extends Gatherer {
     const driver = passContext.driver;
     const expression = `(() => {
       ${pageFunctions.getElementsInDocumentString};
-      ${pageFunctions.getNodeDetailsString};
       ${getElement.toString()};
       ${getImageElement.toString()};
 
