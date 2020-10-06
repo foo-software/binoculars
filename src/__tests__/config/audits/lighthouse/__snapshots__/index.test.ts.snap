@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`audits config getAccesskeys() should match snapshot 1`] = `
+Object {
+  "description": "Access keys let users quickly focus a part of the page. For proper navigation, each access key must be unique. [Learn more](https://www.foo.software/binoculars/accesskeys/).",
+  "title": "\`[accesskey]\` values are unique",
+}
+`;
+
+exports[`audits config getAriaAllowedAttr() should match snapshot 1`] = `
+Object {
+  "description": "Each ARIA \`role\` supports a specific subset of \`aria-*\` attributes. Mismatching these invalidates the \`aria-*\` attributes. [Learn more](https://www.foo.software/binoculars/aria-allowed-attr/).",
+  "title": "\`[aria-*]\` attributes match their roles",
+}
+`;
+
+exports[`audits config getAriaHiddenBody() should match snapshot 1`] = `
+Object {
+  "description": "Assistive technologies, like screen readers, work inconsistently when \`aria-hidden=\\"true\\"\` is set on the document \`<body>\`. [Learn more](https://www.foo.software/binoculars/aria-hidden-body/).",
+  "title": "\`[aria-hidden=\\"true\\"]\` is not present on the document \`<body>\`",
+}
+`;
+
+exports[`audits config getAriaHiddenFocus() should match snapshot 1`] = `
+Object {
+  "description": "Focusable descendents within an \`[aria-hidden=\\"true\\"]\` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn more](https://www.foo.software/binoculars/aria-hidden-focus/).",
+  "title": "\`[aria-hidden=\\"true\\"]\` elements do not contain focusable descendents",
+}
+`;
+
+exports[`audits config getAriaInputFieldName() should match snapshot 1`] = `
+Object {
+  "description": "When an input field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://www.foo.software/binoculars/aria-input-field-name/).",
+  "title": "ARIA input fields have accessible names",
+}
+`;
+
+exports[`audits config getAriaRequiredAttr() should match snapshot 1`] = `
+Object {
+  "description": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more](https://www.foo.software/binoculars/aria-required-attr/).",
+  "title": "\`[role]\`s have all required \`[aria-*]\` attributes",
+}
+`;
+
+exports[`audits config getAriaRequiredChildren() should match snapshot 1`] = `
+Object {
+  "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more](https://www.foo.software/binoculars/aria-required-children/).",
+  "title": "Elements with an ARIA \`[role]\` that require children to contain a specific \`[role]\` have all required children.",
+}
+`;
+
+exports[`audits config getAriaRequiredParent() should match snapshot 1`] = `
+Object {
+  "description": "Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. [Learn more](https://www.foo.software/binoculars/aria-required-parent/).",
+  "title": "\`[role]\`s are contained by their required parent element",
+}
+`;
+
+exports[`audits config getAriaRoles() should match snapshot 1`] = `
+Object {
+  "description": "ARIA roles must have valid values in order to perform their intended accessibility functions. [Learn more](https://www.foo.software/binoculars/aria-roles/).",
+  "title": "\`[role]\` values are valid",
+}
+`;
+
+exports[`audits config getAriaToggleFieldName() should match snapshot 1`] = `
+Object {
+  "description": "When a toggle field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://www.foo.software/binoculars/aria-toggle-field-name/).",
+  "title": "ARIA toggle fields have accessible names",
+}
+`;
+
+exports[`audits config getAriaValidAttr() should match snapshot 1`] = `
+Object {
+  "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid names. [Learn more](https://www.foo.software/binoculars/aria-valid-attr/).",
+  "title": "\`[aria-*]\` attributes are valid and not misspelled",
+}
+`;
+
+exports[`audits config getAriaValidAttrValue() should match snapshot 1`] = `
+Object {
+  "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid values. [Learn more](https://www.foo.software/binoculars/aria-valid-attr-value/).",
+  "title": "\`[aria-*]\` attributes have valid values",
+}
+`;
+
+exports[`audits config getButtonName() should match snapshot 1`] = `
+Object {
+  "description": "When a button doesn't have an accessible name, screen readers announce it as \\"button\\", making it unusable for users who rely on screen readers. [Learn more](https://www.foo.software/binoculars/button-name/).",
+  "title": "Buttons have an accessible name",
+}
+`;
+
+exports[`audits config getBypass() should match snapshot 1`] = `
+Object {
+  "description": "Adding ways to bypass repetitive content lets keyboard users navigate the page more efficiently. [Learn more](https://www.foo.software/binoculars/bypass/).",
+  "title": "The page contains a heading, skip link, or landmark region",
+}
+`;
+
+exports[`audits config getCanonical() should match snapshot 1`] = `
+Object {
+  "description": "Canonical links suggest which URL to show in search results. [Learn more](https://www.foo.software/binoculars/canonical/).",
+  "title": "Document has a valid \`rel=canonical\`",
+}
+`;
+
+exports[`audits config getColorContrast() should match snapshot 1`] = `
+Object {
+  "description": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://www.foo.software/binoculars/color-contrast/).",
+  "title": "Background and foreground colors have a sufficient contrast ratio",
+}
+`;
+
+exports[`audits config getCrawlableAnchors() should match snapshot 1`] = `
+Object {
+  "description": "Search engines may use \`href\` attributes on links to crawl websites. Ensure that the \`href\` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn More](https://support.google.com/webmasters/answer/9112205)",
+  "title": "Links are crawlable",
+}
+`;
+
+exports[`audits config getCustomControlsLabels() should match snapshot 1`] = `
+Object {
+  "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more](https://www.foo.software/binoculars/custom-controls-labels/).",
+  "title": "Custom controls have associated labels",
+}
+`;
+
+exports[`audits config getCustomControlsRoles() should match snapshot 1`] = `
+Object {
+  "description": "Custom interactive controls have appropriate ARIA roles. [Learn more](https://www.foo.software/binoculars/custom-control-roles/).",
+  "title": "Custom controls have ARIA roles",
+}
+`;
+
+exports[`audits config getDefinitionList() should match snapshot 1`] = `
+Object {
+  "description": "When definition lists are not properly marked up, screen readers may produce confusing or inaccurate output. [Learn more](https://www.foo.software/binoculars/definition-list/).",
+  "title": "\`<dl>\`'s contain only properly-ordered \`<dt>\` and \`<dd>\` groups, \`<script>\`, \`<template>\` or \`<div>\` elements.",
+}
+`;
+
+exports[`audits config getDlitem() should match snapshot 1`] = `
+Object {
+  "description": "Definition list items (\`<dt>\` and \`<dd>\`) must be wrapped in a parent \`<dl>\` element to ensure that screen readers can properly announce them. [Learn more](https://www.foo.software/binoculars/dlitem/).",
+  "title": "Definition list items are wrapped in \`<dl>\` elements",
+}
+`;
+
+exports[`audits config getDocumentTitle() should match snapshot 1`] = `
+Object {
+  "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more](https://www.foo.software/binoculars/document-title/).",
+  "title": "Document has a \`<title>\` element",
+}
+`;
+
+exports[`audits config getDuplicateIdActive() should match snapshot 1`] = `
+Object {
+  "description": "All focusable elements must have a unique \`id\` to ensure that they're visible to assistive technologies. [Learn more](https://www.foo.software/binoculars/duplicate-id-active/).",
+  "title": "\`[id]\` attributes on active, focusable elements are unique",
+}
+`;
+
+exports[`audits config getDuplicateIdAria() should match snapshot 1`] = `
+Object {
+  "description": "The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://www.foo.software/binoculars/duplicate-id-aria/).",
+  "title": "ARIA IDs are unique",
+}
+`;
+
+exports[`audits config getFocusTraps() should match snapshot 1`] = `
+Object {
+  "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn more](https://www.foo.software/binoculars/focus-traps/).",
+  "title": "User focus is not accidentally trapped in a region",
+}
+`;
+
+exports[`audits config getFocusableControls() should match snapshot 1`] = `
+Object {
+  "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn more](https://www.foo.software/binoculars/focusable-controls/).",
+  "title": "Interactive controls are keyboard focusable",
+}
+`;
+
+exports[`audits config getFontSize() should match snapshot 1`] = `
+Object {
+  "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to “pinch to zoom” in order to read. Strive to have >60% of page text ≥12px. [Learn more](https://www.foo.software/binoculars/font-size/).",
+  "title": "Document uses legible font sizes",
+}
+`;
+
+exports[`audits config getFormFieldMultipleLabels() should match snapshot 1`] = `
+Object {
+  "description": "Form fields with multiple labels can be confusingly announced by assistive technologies like screen readers which use either the first, the last, or all of the labels. [Learn more](https://www.foo.software/binoculars/form-field-multiple-labels/).",
+  "title": "No form fields have multiple labels",
+}
+`;
+
+exports[`audits config getFrameTitle() should match snapshot 1`] = `
+Object {
+  "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more](https://www.foo.software/binoculars/frame-title/).",
+  "title": "\`<frame>\` or \`<iframe>\` elements have a title",
+}
+`;
+
+exports[`audits config getHeadingOrder() should match snapshot 1`] = `
+Object {
+  "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://www.foo.software/binoculars/heading-order/).",
+  "title": "Heading elements appear in a sequentially-descending order",
+}
+`;
+
+exports[`audits config getHreflang() should match snapshot 1`] = `
+Object {
+  "description": "hreflang links tell search engines what version of a page they should list in search results for a given language or region. [Learn more](https://www.foo.software/binoculars/hreflang/).",
+  "title": "Document has a valid \`hreflang\`",
+}
+`;
+
+exports[`audits config getHtmlHasLang() should match snapshot 1`] = `
+Object {
+  "description": "If a page doesn't specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more](https://www.foo.software/binoculars/html-has-lang/).",
+  "title": "\`<html>\` element has a \`[lang]\` attribute",
+}
+`;
+
+exports[`audits config getHtmlLangValid() should match snapshot 1`] = `
+Object {
+  "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) helps screen readers announce text properly. [Learn more](https://www.foo.software/binoculars/html-lang-valid/).",
+  "title": "\`<html>\` element has a valid value for its \`[lang]\` attribute",
+}
+`;
+
+exports[`audits config getHttpStatusCode() should match snapshot 1`] = `
+Object {
+  "description": "Pages with unsuccessful HTTP status codes may not be indexed properly. [Learn more](https://www.foo.software/binoculars/http-status-code/).",
+  "title": "Page has successful HTTP status code",
+}
+`;
+
+exports[`audits config getImageAlt() should match snapshot 1`] = `
+Object {
+  "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://www.foo.software/binoculars/image-alt/).",
+  "title": "Image elements have \`[alt]\` attributes",
+}
+`;
+
+exports[`audits config getInputImageAlt() should match snapshot 1`] = `
+Object {
+  "description": "When an image is being used as an \`<input>\` button, providing alternative text can help screen reader users understand the purpose of the button. [Learn more](https://www.foo.software/binoculars/input-image-alt/).",
+  "title": "\`<input type=\\"image\\">\` elements have \`[alt]\` text",
+}
+`;
+
+exports[`audits config getInteractiveElementAffordance() should match snapshot 1`] = `
+Object {
+  "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn more](https://www.foo.software/binoculars/interactive-element-affordance/).",
+  "title": "Interactive elements indicate their purpose and state",
+}
+`;
+
+exports[`audits config getIsCrawlable() should match snapshot 1`] = `
+Object {
+  "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more](https://www.foo.software/binoculars/is-crawable/).",
+  "title": "Page isn’t blocked from indexing",
+}
+`;
+
+exports[`audits config getLabel() should match snapshot 1`] = `
+Object {
+  "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more](https://www.foo.software/binoculars/label/).",
+  "title": "Form elements have associated labels",
+}
+`;
+
+exports[`audits config getLayoutTable() should match snapshot 1`] = `
+Object {
+  "description": "A table being used for layout purposes should not include data elements, such as the th or caption elements or the summary attribute, because this can create a confusing experience for screen reader users. [Learn more](https://www.foo.software/binoculars/layout-table/).",
+  "title": "Presentational \`<table>\` elements avoid using \`<th>\`, \`<caption>\` or the \`[summary]\` attribute.",
+}
+`;
+
+exports[`audits config getLinkName() should match snapshot 1`] = `
+Object {
+  "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn more](https://www.foo.software/binoculars/link-name/).",
+  "title": "Links have a discernible name",
+}
+`;
+
+exports[`audits config getLinkText() should match snapshot 1`] = `
+Object {
+  "description": "Descriptive link text helps search engines understand your content. [Learn more](https://www.foo.software/binoculars/link-text/).",
+  "title": "Links have descriptive text",
+}
+`;
+
+exports[`audits config getList() should match snapshot 1`] = `
+Object {
+  "description": "Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. [Learn more](https://www.foo.software/binoculars/list/).",
+  "title": "Lists contain only \`<li>\` elements and script supporting elements (\`<script>\` and \`<template>\`).",
+}
+`;
+
+exports[`audits config getListitem() should match snapshot 1`] = `
+Object {
+  "description": "Screen readers require list items (\`<li>\`) to be contained within a parent \`<ul>\` or \`<ol>\` to be announced properly. [Learn more](https://www.foo.software/binoculars/listitem/).",
+  "title": "List items (\`<li>\`) are contained within \`<ul>\` or \`<ol>\` parent elements",
+}
+`;
+
+exports[`audits config getLogicalTabOrder() should match snapshot 1`] = `
+Object {
+  "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more](https://www.foo.software/binoculars/logical-tab-order/).",
+  "title": "The page has a logical tab order",
+}
+`;
+
+exports[`audits config getManagedFocus() should match snapshot 1`] = `
+Object {
+  "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn more](https://www.foo.software/binoculars/managed-focus/).",
+  "title": "The user's focus is directed to new content added to the page",
+}
+`;
+
+exports[`audits config getMetaDescription() should match snapshot 1`] = `
+Object {
+  "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more](https://www.foo.software/binoculars/meta-description/).",
+  "title": "Document has a meta description",
+}
+`;
+
+exports[`audits config getMetaRefresh() should match snapshot 1`] = `
+Object {
+  "description": "Users do not expect a page to refresh automatically, and doing so will move focus back to the top of the page. This may create a frustrating or confusing experience. [Learn more](https://www.foo.software/binoculars/meta-refresh/).",
+  "title": "The document does not use \`<meta http-equiv=\\"refresh\\">\`",
+}
+`;
+
+exports[`audits config getMetaViewport() should match snapshot 1`] = `
+Object {
+  "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more](https://www.foo.software/binoculars/meta-viewport/).",
+  "title": "\`[user-scalable=\\"no\\"]\` is not used in the \`<meta name=\\"viewport\\">\` element and the \`[maximum-scale]\` attribute is not less than 5.",
+}
+`;
+
+exports[`audits config getObjectAlt() should match snapshot 1`] = `
+Object {
+  "description": "Screen readers cannot translate non-text content. Adding alt text to \`<object>\` elements helps screen readers convey meaning to users. [Learn more](https://www.foo.software/binoculars/object-alt/).",
+  "title": "\`<object>\` elements have \`[alt]\` text",
+}
+`;
+
+exports[`audits config getOffscreenContentHidden() should match snapshot 1`] = `
+Object {
+  "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn more](https://www.foo.software/binoculars/offscreen-content-hidden/).",
+  "title": "Offscreen content is hidden from assistive technology",
+}
+`;
+
+exports[`audits config getPlugins() should match snapshot 1`] = `
+Object {
+  "description": "Search engines can't index plugin content, and many devices restrict plugins or don't support them. [Learn more](https://www.foo.software/binoculars/plugins/).",
+  "title": "Document avoids plugins",
+}
+`;
+
+exports[`audits config getRobotsTxt() should match snapshot 1`] = `
+Object {
+  "description": "If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. [Learn more](https://www.foo.software/binoculars/robots-txt/).",
+  "title": "robots.txt is valid",
+}
+`;
+
+exports[`audits config getStructuredData() should match snapshot 1`] = `
+Object {
+  "description": "Run the [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/) and the [Structured Data Linter](http://linter.structured-data.org/) to validate structured data. [Learn more](https://www.foo.software/binoculars/structured-data/).",
+  "title": "Structured data is valid",
+}
+`;
+
+exports[`audits config getTabindex() should match snapshot 1`] = `
+Object {
+  "description": "A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. [Learn more](https://www.foo.software/binoculars/tabindex/).",
+  "title": "No element has a \`[tabindex]\` value greater than 0",
+}
+`;
+
+exports[`audits config getTapTargets() should match snapshot 1`] = `
+Object {
+  "description": "Interactive elements like buttons and links should be large enough (48x48px), and have enough space around them, to be easy enough to tap without overlapping onto other elements. [Learn more](https://www.foo.software/binoculars/tap-targets/).",
+  "title": "Tap targets are sized appropriately",
+}
+`;
+
+exports[`audits config getTdHeadersAttr() should match snapshot 1`] = `
+Object {
+  "description": "Screen readers have features to make navigating tables easier. Ensuring \`<td>\` cells using the \`[headers]\` attribute only refer to other cells in the same table may improve the experience for screen reader users. [Learn more](https://www.foo.software/binoculars/td-headers-attr/).",
+  "title": "Cells in a \`<table>\` element that use the \`[headers]\` attribute refer to table cells within the same table.",
+}
+`;
+
+exports[`audits config getThHasDataCells() should match snapshot 1`] = `
+Object {
+  "description": "Screen readers have features to make navigating tables easier. Ensuring table headers always refer to some set of cells may improve the experience for screen reader users. [Learn more](https://www.foo.software/binoculars/th-has-data-cells/).",
+  "title": "\`<th>\` elements and elements with \`[role=\\"columnheader\\"/\\"rowheader\\"]\` have data cells they describe.",
+}
+`;
+
+exports[`audits config getUseLandmarks() should match snapshot 1`] = `
+Object {
+  "description": "Landmark elements (<main>, <nav>, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more](https://www.foo.software/binoculars/use-landmarks/).",
+  "title": "HTML5 landmark elements are used to improve navigation",
+}
+`;
+
+exports[`audits config getValidLang() should match snapshot 1`] = `
+Object {
+  "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) on elements helps ensure that text is pronounced correctly by a screen reader. [Learn more](https://www.foo.software/binoculars/valid-lang/).",
+  "title": "\`[lang]\` attributes have a valid value",
+}
+`;
+
+exports[`audits config getVideoCaption() should match snapshot 1`] = `
+Object {
+  "description": "When a video provides a caption it is easier for deaf and hearing impaired users to access its information. [Learn more](https://www.foo.software/binoculars/video-caption/).",
+  "title": "\`<video>\` elements contain a \`<track>\` element with \`[kind=\\"captions\\"]\`",
+}
+`;
+
+exports[`audits config getVideoDescription() should match snapshot 1`] = `
+Object {
+  "description": "Audio descriptions provide relevant information for videos that dialogue cannot, such as facial expressions and scenes. [Learn more](https://www.foo.software/binoculars/video-description/).",
+  "title": "\`<video>\` elements contain a \`<track>\` element with \`[kind=\\"description\\"]\`",
+}
+`;
+
+exports[`audits config getViewport() should match snapshot 1`] = `
+Object {
+  "description": "Add a \`<meta name=\\"viewport\\">\` tag to optimize your app for mobile screens. [Learn more](https://www.foo.software/binoculars/viewport/).",
+  "title": "Has a \`<meta name=\\"viewport\\">\` tag with \`width\` or \`initial-scale\`",
+}
+`;
+
+exports[`audits config getVisualOrderFollowsDom() should match snapshot 1`] = `
+Object {
+  "description": "DOM order matches the visual order, improving navigation for assistive technology. [Learn more](https://www.foo.software/binoculars/visual-order-follows-dom/).",
+  "title": "Visual order on the page follows DOM order",
+}
+`;
