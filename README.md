@@ -224,7 +224,7 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     </tr>
     <tr>
       <td>meaningful-tag-structure</td>
-      <td>Has at least 2 different informational content tags of the following types: <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;table&gt;</code></td>
+      <td>Has at least 2 different informational HTML tags of the following types: <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;table&gt;</code></td>
       <td>2</td>
       <td>Binoculars</td>
     </tr>

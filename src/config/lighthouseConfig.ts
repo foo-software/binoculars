@@ -8,7 +8,7 @@ import a11yNamesLabels from './groups/a11y-names-labels';
 import a11yNavigation from './groups/a11y-navigation';
 import a11yTablesLists from './groups/a11y-tables-lists';
 import DescriptionLengthAudit from '../audits/seo/description-length';
-import HeadingElementsGatherer from '../gatherers/heading-elements';
+import ElementsGatherer from '../gatherers/elements';
 import HeadingsAudit from '../audits/seo/headings';
 import meaningfulContent from './groups/meaningful-content';
 import seo from './categories/seo';
@@ -94,7 +94,7 @@ export default (locale: string | undefined | unknown) => ({
   passes: [
     {
       passName: 'defaultPass',
-      gatherers: [HeadingElementsGatherer, TitleElementGatherer],
+      gatherers: [ElementsGatherer, TitleElementGatherer],
     },
   ],
   settings: {

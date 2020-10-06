@@ -1,5 +1,5 @@
 import { Audit } from 'lighthouse';
-import { HeadingElementsInterface } from '../../gatherers/heading-elements';
+import { ElementsInterface } from '../../gatherers/elements';
 import AuditScore from '../../interfaces/AuditScore';
 
 export const UIStrings = {
@@ -16,16 +16,15 @@ export default class Headings extends Audit {
       title: UIStrings.title,
       failureTitle: UIStrings.failureTitle,
       description: UIStrings.description,
-      requiredArtifacts: ['HeadingElements'],
+      requiredArtifacts: ['Elements'],
     };
   }
 
-  static audit(artifacts: {
-    HeadingElements: HeadingElementsInterface;
-  }): AuditScore {
-    const headingElements = artifacts.HeadingElements;
+  static audit(artifacts: { Elements: ElementsInterface }): AuditScore {
+    const elements = artifacts.Elements;
+    console.log('elements', elements);
     return {
-      score: headingElements.h1s.length && headingElements.h2s.length && 1,
+      score: elements.h1.length && elements.h2.length && 1,
     };
   }
 }
