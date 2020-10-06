@@ -7,6 +7,7 @@ Object {
     [Function],
     [Function],
     [Function],
+    [Function],
   ],
   "categories": Object {
     "seo": Object {
@@ -344,6 +345,11 @@ Object {
           "group": "meaningful-content",
           "id": "meaningful-text",
           "weight": 3,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "meaningful-tag-structure",
+          "weight": 2,
         },
       ],
       "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Binoculars does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
