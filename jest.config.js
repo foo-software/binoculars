@@ -12,6 +12,7 @@ module.exports = {
     "json",
     "node",
   ],
+  rootDir: 'src',
   testEnvironment: 'node',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)x?$',
   transform: {

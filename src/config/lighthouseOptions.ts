@@ -1,3 +1,5 @@
+export const PORT = process.env.BINOCULARS_CHROME_PORT || 4000;
+
 export default {
   chromeFlags: [
     '--disable-dev-shm-usage',
@@ -5,5 +7,5 @@ export default {
     '--no-sandbox',
     '--ignore-certificate-errors',
   ],
-  port: 4000,
+  port: PORT,
 };

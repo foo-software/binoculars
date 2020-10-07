@@ -1,15 +1,9 @@
 #!/usr/bin/env node
-import integrationServer, { PORT } from '../integration-server';
-import logger from '../helpers/logger';
+import { startServer } from '../integration-server';
 
 const run = async () => {
   try {
-    await new Promise((resolve) =>
-      integrationServer.listen(PORT, () => {
-        logger.info(`listening on port ${PORT}`);
-        resolve();
-      }),
-    );
+    await startServer();
   } catch (error) {
     console.error(error);
     process.exit(1);

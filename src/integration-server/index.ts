@@ -2,8 +2,9 @@ import express from 'express';
 import fetch from 'node-fetch';
 import http from 'http';
 import CatPicDataInterface from '../interfaces/CatPicData';
-import page from './content/page';
 import getDocument from './content/getDocument';
+import logger from '../helpers/logger';
+import page from './content/page';
 
 const app = express();
 
@@ -44,6 +45,24 @@ app.get('/', async (_req, res) => {
   );
 });
 
-export const PORT = process.env.PORT || 3000;
+const server = http.createServer(app);
 
-export default http.createServer(app);
+export const PORT = process.env.BINOCULARS_INTEGRATION_SERVER_PORT || 3000;
+
+export const startServer = () =>
+  new Promise((resolve) =>
+    server.listen(PORT, () => {
+      logger.info(`listening on port ${PORT}`);
+      resolve();
+    }),
+  );
+
+export const stopServer = () =>
+  new Promise((resolve) =>
+    server.close(() => {
+      logger.info('server stopped');
+      resolve();
+    }),
+  );
+
+export default server;
