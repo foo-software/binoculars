@@ -1,6 +1,6 @@
 import { Audit } from 'lighthouse';
 import ElementsInterface from '../../interfaces/Elements';
-import AuditScore from '../../interfaces/AuditScore';
+import AuditScoreInterface from '../../interfaces/AuditScore';
 
 export const MIN_TEXT_LENGTH = 300;
 
@@ -21,10 +21,10 @@ export default class MeaningfulText extends Audit {
     };
   }
 
-  static audit(artifacts: { Elements: ElementsInterface }): AuditScore {
-    const {
-      body: [body],
-    } = artifacts.Elements;
+  static audit(artifacts: {
+    Elements: ElementsInterface;
+  }): AuditScoreInterface {
+    const [body] = artifacts.Elements?.body || [];
 
     return {
       score: !body || !body.text || body.text.length < MIN_TEXT_LENGTH ? 0 : 1,

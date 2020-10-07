@@ -1,5 +1,5 @@
 import { Audit } from 'lighthouse';
-import AuditScore from '../../interfaces/AuditScore';
+import AuditScoreInterface from '../../interfaces/AuditScore';
 import Collection from '../../interfaces/Collection';
 
 const MIN_KEYWORD_COUNT = 2;
@@ -68,7 +68,7 @@ export default class Keywords extends Audit {
     };
   }
 
-  static audit(artifacts: any): AuditScore {
+  static audit(artifacts: any): AuditScoreInterface {
     const {
       Elements: {
         body: [body],

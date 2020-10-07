@@ -1,5 +1,5 @@
 import { Audit } from 'lighthouse';
-import AuditScore from '../../interfaces/AuditScore';
+import AuditScoreInterface from '../../interfaces/AuditScore';
 
 export const MAX_TEXT_LENGTH = 70;
 export const MIN_TEXT_LENGTH = 50;
@@ -22,7 +22,7 @@ export default class TitleLength extends Audit {
     };
   }
 
-  static audit(artifacts: any): AuditScore {
+  static audit(artifacts: any): AuditScoreInterface {
     const title = artifacts.TitleElement;
 
     if (!title || !title.text) {

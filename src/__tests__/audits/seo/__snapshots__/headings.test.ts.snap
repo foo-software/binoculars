@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeadingsAudit HeadingsAudit.meta should match snapshot 1`] = `
+Object {
+  "description": "Headings are important in signaling a hierarchy of content to the search engine.",
+  "failureTitle": "Does not have both \`<h1>\` and \`<h2>\` headings",
+  "id": "headings",
+  "requiredArtifacts": Array [
+    "Elements",
+  ],
+  "title": "Has \`<h1>\` and \`<h2>\` headings",
+}
+`;

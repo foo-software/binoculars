@@ -1,5 +1,5 @@
 import { Audit } from 'lighthouse';
-import AuditScore from '../../interfaces/AuditScore';
+import AuditScoreInterface from '../../interfaces/AuditScore';
 
 export const MAX_TEXT_LENGTH = 160;
 export const MIN_TEXT_LENGTH = 100;
@@ -22,7 +22,7 @@ export default class DescriptionLength extends Audit {
     };
   }
 
-  static audit(artifacts: any): AuditScore {
+  static audit(artifacts: any): AuditScoreInterface {
     const metaDescription = artifacts.MetaElements.find(
       (meta: any) => meta.name === 'description',
     );

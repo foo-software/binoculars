@@ -1,6 +1,6 @@
 import { Audit } from 'lighthouse';
-import ElementsInterface from '../../interfaces/Elements';
-import AuditScore from '../../interfaces/AuditScore';
+import AuditScoreInterface from '../../interfaces/AuditScore';
+import ArtifactsInterface from '../../interfaces/Artifacts';
 
 export const UIStrings = {
   title: 'Has `<h1>` and `<h2>` headings',
@@ -20,10 +20,10 @@ export default class Headings extends Audit {
     };
   }
 
-  static audit(artifacts: { Elements: ElementsInterface }): AuditScore {
+  static audit(artifacts: ArtifactsInterface): AuditScoreInterface {
     const elements = artifacts.Elements;
     return {
-      score: elements.h1.length && elements.h2.length && 1,
+      score: (elements?.h1?.length && elements?.h2?.length && 1) || 0,
     };
   }
 }

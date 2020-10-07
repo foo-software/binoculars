@@ -1,6 +1,6 @@
 import { Audit } from 'lighthouse';
 import ElementsInterface from '../../interfaces/Elements';
-import AuditScore from '../../interfaces/AuditScore';
+import AuditScoreInterface from '../../interfaces/AuditScore';
 
 const MIN_DIVERSITY = 2;
 
@@ -21,7 +21,9 @@ export default class MeaningfulTagStructure extends Audit {
     };
   }
 
-  static audit(artifacts: { Elements: ElementsInterface }): AuditScore {
+  static audit(artifacts: {
+    Elements: ElementsInterface;
+  }): AuditScoreInterface {
     const { img, li, p, table } = artifacts.Elements;
 
     const diversity = [img, li, p, table].reduce((accumulator, current) => {
