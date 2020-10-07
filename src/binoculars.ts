@@ -23,7 +23,7 @@ export default async ({
   outputDirectory?: string | undefined | unknown;
   url: string | undefined | unknown;
 }) => {
-  logger.info('running...');
+  logger.info(`running audit: ${url}`);
 
   const { localReport, result, report } = await lighthousePersist({
     awsAccessKeyId,
@@ -36,7 +36,10 @@ export default async ({
     url,
   });
 
-  logger.info('audit complete ✔️');
+  const score = result?.categories?.binocularsSeo?.score;
+  const scoreText =
+    typeof score !== 'number' ? '' : ` with a score of ${score * 100}`;
+  logger.info(`✔️ audit complete${scoreText}`);
 
   if (localReport) {
     const reportPath = path.resolve(localReport);

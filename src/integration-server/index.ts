@@ -31,16 +31,121 @@ const fetchKitty = async (): Promise<CatPicDataInterface> => {
   }
 };
 
+const description = `Cry louder at ipsum reflection leave dead animals as gifts bite nose of your human chew the plant no, you can't close the door lorem.`;
+const title = `Cry louder at ipsum reflection leave dead animals as gifts lorem`;
+const h1 = 'Hello world';
+
 app.get('/', async (_req, res) => {
   const catPicData = await fetchKitty();
   return res.send(
     getDocument({
       content: page({
         catPicData,
-        h1: 'Hello world',
+        h1,
       }),
-      description: `Cry louder at ipsum reflection leave dead animals as gifts bite nose of your human chew the plant no, you can't close the door lorem.`,
-      title: `Cry louder at ipsum reflection leave dead animals as gifts lorem`,
+      description,
+      title,
+    }),
+  );
+});
+
+app.get('/short-description', async (_req, res) => {
+  const catPicData = await fetchKitty();
+  return res.send(
+    getDocument({
+      content: page({
+        catPicData,
+        h1,
+      }),
+      description: 'ipsum lorem',
+      title,
+    }),
+  );
+});
+
+app.get('/short-title', async (_req, res) => {
+  const catPicData = await fetchKitty();
+  return res.send(
+    getDocument({
+      content: page({
+        catPicData,
+        h1,
+      }),
+      description,
+      title: 'ipsum lorem',
+    }),
+  );
+});
+
+app.get('/no-h1', async (_req, res) => {
+  const catPicData = await fetchKitty();
+  return res.send(
+    getDocument({
+      content: page({
+        catPicData,
+      }),
+      description,
+      title,
+    }),
+  );
+});
+
+app.get('/missing-keywords', async (_req, res) => {
+  const catPicData = await fetchKitty();
+  return res.send(
+    getDocument({
+      content: page({
+        catPicData,
+        h1,
+      }),
+      description:
+        'no keywords in this description no keywords in this description no keywords in this description no keywords in this description',
+      title,
+    }),
+  );
+});
+
+app.get('/poor-tag-structure', (_req, res) => {
+  return res.send(
+    getDocument({
+      content: page({
+        // because we don't add `catPicData` - the page will not have an image
+        h1,
+      }),
+      description,
+      title,
+    }),
+  );
+});
+
+app.get('/no-text', async (_req, res) => {
+  const catPicData = await fetchKitty();
+  return res.send(
+    getDocument({
+      content: page({
+        catPicData,
+        h1,
+
+        // "ipsum" and "lorem" are "keywords"
+        content: '<h2>ipsum lorem</h2><p>ipsum lorem</p>',
+      }),
+      description,
+      title,
+    }),
+  );
+});
+
+app.get('/fail-all', async (_req, res) => {
+  const catPicData = await fetchKitty();
+  return res.send(
+    getDocument({
+      content: page({
+        catPicData,
+        h1,
+        content: '<span>ipsum lorem</span>',
+      }),
+      description: 'hello world',
+      title: 'short title',
     }),
   );
 });
