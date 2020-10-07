@@ -1,4 +1,4 @@
-import * as binoculars from '../index';
+import * as binoculars from '../../index';
 
 describe('Binoculars', () => {
   it('should match snapshot', () => {

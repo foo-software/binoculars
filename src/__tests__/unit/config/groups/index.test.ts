@@ -1,9 +1,12 @@
-import * as audits from '../../../../config/audits/lighthouse';
-import Collection from '../../../../interfaces/Collection';
+import * as groups from '../../../../config/groups';
 
-const auditCollection: Collection = audits;
+interface DefinitionCollection {
+  [key: string]: any;
+}
 
-describe('audits config', () => {
+const auditCollection: DefinitionCollection = groups;
+
+describe('groups config', () => {
   for (const key in auditCollection) {
     describe(`${key}()`, () => {
       const audit = auditCollection[key]();

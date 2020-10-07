@@ -1,5 +1,5 @@
-import ArtifactsInterface from '../../../interfaces/Artifacts';
-import HeadingsAudit from '../../../audits/seo/headings';
+import ArtifactsInterface from '../../../../interfaces/Artifacts';
+import HeadingsAudit from '../../../../audits/seo/headings';
 
 describe('HeadingsAudit', () => {
   describe('HeadingsAudit.meta', () => {

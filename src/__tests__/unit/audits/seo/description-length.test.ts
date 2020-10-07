@@ -1,5 +1,5 @@
-import ArtifactsInterface from '../../../interfaces/Artifacts';
-import DescriptionLengthAudit from '../../../audits/seo/description-length';
+import ArtifactsInterface from '../../../../interfaces/Artifacts';
+import DescriptionLengthAudit from '../../../../audits/seo/description-length';
 
 describe('DescriptionLengthAudit', () => {
   describe('DescriptionLengthAudit.meta', () => {

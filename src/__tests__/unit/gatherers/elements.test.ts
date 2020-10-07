@@ -1,4 +1,4 @@
-import ElementsGatherer from '../../gatherers/elements';
+import ElementsGatherer from '../../../gatherers/elements';
 
 const mockEvaluateAsync = jest.fn(() =>
   Promise.resolve({

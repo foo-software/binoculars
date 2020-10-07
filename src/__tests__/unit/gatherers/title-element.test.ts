@@ -1,4 +1,4 @@
-import TitleElementGatherer from '../../gatherers/title-element';
+import TitleElementGatherer from '../../../gatherers/title-element';
 
 const mockEvaluateAsync = jest.fn(() =>
   Promise.resolve({

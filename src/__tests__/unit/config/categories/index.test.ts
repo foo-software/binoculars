@@ -1,12 +1,12 @@
-import * as groups from '../../../config/groups';
+import * as categories from '../../../../config/categories';
 
 interface DefinitionCollection {
   [key: string]: any;
 }
 
-const auditCollection: DefinitionCollection = groups;
+const auditCollection: DefinitionCollection = categories;
 
-describe('groups config', () => {
+describe('categories config', () => {
   for (const key in auditCollection) {
     describe(`${key}()`, () => {
       const audit = auditCollection[key]();

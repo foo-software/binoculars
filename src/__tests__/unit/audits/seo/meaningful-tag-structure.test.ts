@@ -1,5 +1,5 @@
-import ArtifactsInterface from '../../../interfaces/Artifacts';
-import MeaningfulTagStructureAudit from '../../../audits/seo/meaningful-tag-structure';
+import ArtifactsInterface from '../../../../interfaces/Artifacts';
+import MeaningfulTagStructureAudit from '../../../../audits/seo/meaningful-tag-structure';
 
 describe('MeaningfulTagStructureAudit', () => {
   describe('MeaningfulTagStructureAudit.meta', () => {

@@ -1,5 +1,5 @@
-import ArtifactsInterface from '../../../interfaces/Artifacts';
-import KeywordsAudit from '../../../audits/seo/keywords';
+import ArtifactsInterface from '../../../../interfaces/Artifacts';
+import KeywordsAudit from '../../../../audits/seo/keywords';
 
 describe('KeywordsAudit', () => {
   describe('KeywordsAudit.meta', () => {

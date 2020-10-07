@@ -1,5 +1,5 @@
-import ArtifactsInterface from '../../../interfaces/Artifacts';
-import MeaningfulTextAudit from '../../../audits/seo/meaningful-text';
+import ArtifactsInterface from '../../../../interfaces/Artifacts';
+import MeaningfulTextAudit from '../../../../audits/seo/meaningful-text';
 
 describe('MeaningfulTextAudit', () => {
   describe('MeaningfulTextAudit.meta', () => {
