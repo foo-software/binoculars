@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeaningfulTextAudit MeaningfulTextAudit.meta should match snapshot 1`] = `
+Object {
+  "description": "A minimal amount of textual content is necessary for search engines to pickup. Document body should have at least 300 characters.",
+  "failureTitle": "Document body does not have at least 300 characters",
+  "id": "meaningful-text",
+  "requiredArtifacts": Array [
+    "Elements",
+  ],
+  "title": "Has sufficient, meaningful text content",
+}
+`;
