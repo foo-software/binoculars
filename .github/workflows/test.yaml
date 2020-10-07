@@ -18,3 +18,6 @@ jobs:
         run: npm run test:unit:coverage
       - name: integration tests
         run: LOG_LEVEL=off npm run test:integration
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
