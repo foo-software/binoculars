@@ -26,5 +26,17 @@ describe('DescriptionLengthAudit', () => {
       const result = DescriptionLengthAudit.audit(artifacts);
       expect(result).toEqual({ score: 1 });
     });
+
+    it('should return a failing score when description is too long', () => {
+      artifacts.MetaElements = [
+        {
+          name: 'description',
+          content:
+            'ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        },
+      ];
+      const result = DescriptionLengthAudit.audit(artifacts);
+      expect(result).toEqual({ score: 0 });
+    });
   });
 });
