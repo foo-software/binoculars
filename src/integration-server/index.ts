@@ -2,7 +2,7 @@ import express from 'express';
 import fetch from 'node-fetch';
 import http from 'http';
 import CatPicDataInterface from '../interfaces/CatPicData';
-import page100 from './content/page-100';
+import page from './content/page';
 import getDocument from './content/getDocument';
 
 const app = express();
@@ -34,7 +34,10 @@ app.get('/', async (_req, res) => {
   const catPicData = await fetchKitty();
   return res.send(
     getDocument({
-      content: page100(catPicData),
+      content: page({
+        catPicData,
+        h1: 'Hello world',
+      }),
       description: `Cry louder at ipsum reflection leave dead animals as gifts bite nose of your human chew the plant no, you can't close the door lorem.`,
       title: `Cry louder at ipsum reflection leave dead animals as gifts lorem`,
     }),
