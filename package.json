@@ -3,16 +3,18 @@
   "version": "0.0.1",
   "description": "A tool to measure web page SEO friendliness",
   "bin": {
-    "binoculars": "dist/bin/binoculars.js"
+    "binoculars": "dist/bin/binoculars.js",
+    "binoculars-integration-server": "dist/bin/integration-server.js"
   },
   "scripts": {
     "binoculars": "node dist/bin/binoculars.js",
     "clean": "rimraf coverage dist tmp",
-    "build": "tsc -p tsconfig.release.json",
+    "build": "npm run clean && tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "generate": "plop",
     "lint": "eslint . --ext .ts,.tsx",
-    "prepare": "npm run clean && npm run build",
+    "prepare": "npm run build",
+    "start:integration-server": "node dist/bin/integration-server.js",
     "test:unit": "jest",
     "test:unit:coverage": "jest --coverage",
     "test:unit:watch": "jest --watch"
@@ -69,7 +71,11 @@
   },
   "dependencies": {
     "@foo-software/lighthouse-persist": "^1.0.3",
+    "@types/express": "^4.17.8",
+    "@types/node-fetch": "^2.5.7",
+    "express": "^4.17.1",
     "meow": "^7.1.0",
+    "node-fetch": "^2.6.1",
     "winston": "^3.3.3"
   }
 }
