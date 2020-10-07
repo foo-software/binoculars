@@ -3,12 +3,25 @@ import meow from 'meow';
 import binoculars from '../binoculars';
 
 const cli = meow();
-const { url, locale } = cli.flags;
+const {
+  awsAccessKeyId,
+  awsBucket,
+  awsRegion,
+  awsSecretAccessKey,
+  locale,
+  outputDirectory,
+  url,
+} = cli.flags;
 
 const run = async () => {
   try {
     await binoculars({
+      awsAccessKeyId,
+      awsBucket,
+      awsRegion,
+      awsSecretAccessKey,
       locale,
+      outputDirectory,
       url,
     });
   } catch (error) {

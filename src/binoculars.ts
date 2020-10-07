@@ -6,31 +6,49 @@ import lighthouseConfig from './config/lighthouseConfig';
 import lighthouseOptions from './config/lighthouseOptions';
 
 export default async ({
+  awsAccessKeyId,
+  awsBucket,
+  awsRegion,
+  awsSecretAccessKey,
   locale,
+  outputDirectory,
   url,
 }: {
-  locale: string | undefined | unknown;
+  awsAccessKeyId?: string | undefined | unknown;
+  awsBucket?: string | undefined | unknown;
+  awsRegion?: string | undefined | unknown;
+  awsSecretAccessKey?: string | undefined | unknown;
+  locale?: string | undefined | unknown;
+  outputDirectory?: string | undefined | unknown;
   url: string | undefined | unknown;
 }) => {
   console.log('Running Lighthouse...');
 
-  const { localReport } = await lighthousePersist({
+  const { localReport, result, report } = await lighthousePersist({
+    awsAccessKeyId,
+    awsBucket,
+    awsRegion,
+    awsSecretAccessKey,
     config: lighthouseConfig(locale),
     options: lighthouseOptions,
-    outputDirectory: './reports',
+    outputDirectory,
     url,
   });
 
   console.log('Lighthouse audit complete ✔️');
 
-  console.log('Updating report...');
+  if (localReport) {
+    const reportPath = path.resolve(localReport);
+    let reportContent = fs.readFileSync(reportPath, 'utf8');
+    reportContent = getUpdatedReportContent(reportContent);
+    fs.writeFileSync(reportPath, reportContent);
 
-  const reportPath = path.resolve(localReport);
-  let reportContent = fs.readFileSync(reportPath, 'utf8');
-  reportContent = getUpdatedReportContent(reportContent);
-  fs.writeFileSync(reportPath, reportContent);
+    console.log('report path ✔️', reportPath);
+  }
 
-  console.log('Report update complete ✔️');
-
-  console.log('report path', reportPath);
+  return {
+    localReport,
+    result,
+    report,
+  };
 };
