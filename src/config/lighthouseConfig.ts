@@ -82,7 +82,7 @@ export default (locale: string | undefined | unknown) => ({
     TitleLengthAudit,
   ],
   categories: {
-    seo: {
+    binocularsSeo: {
       ...seo(locale),
       auditRefs: seoAuditRefs,
     },
@@ -109,7 +109,7 @@ export default (locale: string | undefined | unknown) => ({
   ],
   settings: {
     emulatedFormFactor: 'mobile',
-    onlyCategories: ['seo'],
+    onlyCategories: ['binocularsSeo'],
     throttling: throttling.mobileSlow4G,
     throttlingMethod: 'simulate',
   },

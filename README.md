@@ -23,43 +23,43 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <tr>
       <td>aria-hidden-body</td>
       <td><code>[aria-hidden="true"]</code> is not present on the document <code>&lt;body&gt;</code></td>
-      <td>10</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>aria-required-attr</td>
       <td><code>[role]</code>s have all required <code>[aria-*]</code> attributes</td>
-      <td>10</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>aria-required-children</td>
       <td>Elements with an ARIA <code>[role]</code> that require children to contain a specific <code>[role]</code> have all required children.</td>
-      <td>10</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>aria-required-parent</td>
       <td><code>[role]</code>s are contained by their required parent element</td>
-      <td>10</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>aria-roles</td>
       <td><code>[role]</code> values are valid</td>
-      <td>10</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>image-alt</td>
       <td>Image elements have <code>[alt]</code> attributes</td>
-      <td>10</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>meta-viewport</td>
       <td><code>[user-scalable="no"]</code> is not used in the <code>&lt;meta name="viewport"&gt;</code> element and the <code>[maximum-scale]</code> attribute is not less than 5.</td>
-      <td>10</td>
+      <td>3</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
@@ -118,25 +118,25 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <tr>
       <td>document-title</td>
       <td>Document has a <code>&lt;title&gt;</code> element</td>
-      <td>1</td>
+      <td>10</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>meta-description</td>
       <td>Document has a meta description</td>
-      <td>1</td>
+      <td>10</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>link-text</td>
       <td>Links have descriptive text</td>
-      <td>1</td>
+      <td>2</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>hreflang</td>
       <td>Document has a valid <code>hreflang</code></td>
-      <td>1</td>
+      <td>2</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
@@ -160,19 +160,19 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <tr>
       <td>is-crawlable</td>
       <td>Page isn't blocked from indexing</td>
-      <td>1</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>robots-txt</td>
       <td>robots.txt is valid</td>
-      <td>1</td>
+      <td>2</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
       <td>viewport</td>
       <td>Has a <code>&lt;meta name="viewport"&gt;</code> tag with <code>width</code> or <code>initial-scale</code></td>
-      <td>1</td>
+      <td>5</td>
       <td>Lighthouse</td>
     </tr>
     <tr>
@@ -195,37 +195,37 @@ Below are metrics we'll pull together and weights to generate a report. Most met
     <tr>
       <td>title-length</td>
       <td>Title should be between 50 - 70 characters</td>
-      <td>1</td>
+      <td>7</td>
       <td>Binoculars</td>
     </tr>
     <tr>
       <td>description-length</td>
       <td>Descriptions should be between 100 - 160 characters</td>
-      <td>1</td>
+      <td>7</td>
       <td>Binoculars</td>
     </tr>
     <tr>
       <td>keywords</td>
       <td>Keyword phrases of at least 2 words should exist in the title, description and at least twice in the content of the page</td>
-      <td>3</td>
+      <td>7</td>
       <td>Binoculars</td>
     </tr>
     <tr>
       <td>headings</td>
       <td>Has at least 1 <code>&lt;h1&gt;</code> tag and 1 <code>&lt;h2&gt;</code> tag</td>
-      <td>2</td>
+      <td>5</td>
       <td>Binoculars</td>
     </tr>
     <tr>
       <td>meaningful-text</td>
       <td>Has at least 300 characters</td>
-      <td>3</td>
+      <td>5</td>
       <td>Binoculars</td>
     </tr>
     <tr>
       <td>meaningful-tag-structure</td>
       <td>Has at least 2 different informational HTML tags of the following types: <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;table&gt;</code></td>
-      <td>2</td>
+      <td>5</td>
       <td>Binoculars</td>
     </tr>
   </table>
@@ -246,9 +246,9 @@ This is a list of todo items in order to launch Binoculars web pages and the NPM
 - [ ] Pages for each metric.
 - [ ] Page about SEO.
 - [x] Define new metrics for new content group and weighting.
-- [ ] Re-evaluate and update weighting.
-- [ ] Create [custom audits](https://github.com/GoogleChrome/lighthouse/tree/master/docs/recipes/custom-audit) for new metrics.
-- [ ] Generate HTML report with updated links and other formatting.
+- [x] Re-evaluate and update weighting.
+- [x] Create [custom audits](https://github.com/GoogleChrome/lighthouse/tree/master/docs/recipes/custom-audit) for new metrics.
+- [x] Generate HTML report with updated links and other formatting.
 - [ ] Report upload functionality.
 - [ ] [Integration testing](https://github.com/GoogleChrome/lighthouse/tree/master/docs/recipes/integration-test).
 - [ ] Finalize NPM package.

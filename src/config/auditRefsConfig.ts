@@ -2,17 +2,17 @@ export const seoAuditRefs = [
   // from SEO category
   {
     id: 'viewport',
-    weight: 1,
+    weight: 5,
     group: 'seo-mobile',
   },
   {
     id: 'document-title',
-    weight: 1,
+    weight: 10,
     group: 'seo-content',
   },
   {
     id: 'meta-description',
-    weight: 1,
+    weight: 10,
     group: 'seo-content',
   },
   {
@@ -22,7 +22,7 @@ export const seoAuditRefs = [
   },
   {
     id: 'link-text',
-    weight: 1,
+    weight: 2,
     group: 'seo-content',
   },
   {
@@ -32,12 +32,12 @@ export const seoAuditRefs = [
   },
   {
     id: 'is-crawlable',
-    weight: 1,
+    weight: 5,
     group: 'seo-crawl',
   },
   {
     id: 'robots-txt',
-    weight: 1,
+    weight: 2,
     group: 'seo-crawl',
   },
   {
@@ -47,7 +47,7 @@ export const seoAuditRefs = [
   },
   {
     id: 'hreflang',
-    weight: 1,
+    weight: 2,
     group: 'seo-content',
   },
   {
@@ -87,7 +87,7 @@ export const seoAuditRefs = [
   },
   {
     id: 'aria-hidden-body',
-    weight: 10,
+    weight: 5,
     group: 'a11y-aria',
   },
   {
@@ -107,17 +107,17 @@ export const seoAuditRefs = [
   },
   {
     id: 'aria-required-children',
-    weight: 10,
+    weight: 5,
     group: 'a11y-aria',
   },
   {
     id: 'aria-required-parent',
-    weight: 10,
+    weight: 5,
     group: 'a11y-aria',
   },
   {
     id: 'aria-roles',
-    weight: 10,
+    weight: 5,
     group: 'a11y-aria',
   },
   {
@@ -237,7 +237,7 @@ export const seoAuditRefs = [
   },
   {
     id: 'meta-viewport',
-    weight: 10,
+    weight: 3,
     group: 'a11y-best-practices',
   },
   {
@@ -319,31 +319,31 @@ export const seoAuditRefs = [
   {
     id: 'title-length',
     group: 'meaningful-content',
-    weight: 1,
+    weight: 7,
   },
   {
     id: 'description-length',
     group: 'meaningful-content',
-    weight: 1,
+    weight: 7,
   },
   {
     id: 'headings',
     group: 'meaningful-content',
-    weight: 2,
+    weight: 5,
   },
   {
     id: 'meaningful-text',
     group: 'meaningful-content',
-    weight: 3,
+    weight: 5,
   },
   {
     id: 'meaningful-tag-structure',
     group: 'meaningful-content',
-    weight: 2,
+    weight: 5,
   },
   {
     id: 'keywords',
     group: 'meaningful-content',
-    weight: 3,
+    weight: 7,
   },
 ];
