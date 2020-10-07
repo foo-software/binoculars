@@ -12,13 +12,14 @@
     "build": "npm run clean && tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "generate": "plop",
+    "jest": "jest",
     "lint": "eslint . --ext .ts,.tsx",
     "prepare": "npm run build",
     "start:integration-server": "node dist/bin/integration-server.js",
     "test": "npm run test:unit:coverage",
-    "test:unit": "jest",
-    "test:unit:coverage": "jest --coverage",
-    "test:unit:watch": "jest --watch"
+    "test:unit": "jest ./__tests__/unit",
+    "test:unit:coverage": "jest ./__tests__/unit --coverage",
+    "test:unit:watch": "jest ./__tests__/unit --watch"
   },
   "repository": {
     "type": "git",
