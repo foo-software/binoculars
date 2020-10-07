@@ -24,7 +24,7 @@ describe('DescriptionLengthAudit', () => {
         },
       ];
       const result = DescriptionLengthAudit.audit(artifacts);
-      expect(result).toEqual({ score: 1 });
+      expect(result.score).toEqual(1);
     });
 
     it('should return a failing score when description is too long', () => {
@@ -36,7 +36,35 @@ describe('DescriptionLengthAudit', () => {
         },
       ];
       const result = DescriptionLengthAudit.audit(artifacts);
-      expect(result).toEqual({ score: 0 });
+      expect(result.score).toEqual(0);
+    });
+
+    it('should return a failing score when description is too short', () => {
+      artifacts.MetaElements = [
+        {
+          name: 'description',
+          content: 'ipsum lorem',
+        },
+      ];
+      const result = DescriptionLengthAudit.audit(artifacts);
+      expect(result.score).toEqual(0);
+    });
+
+    it('should return a failing score when description is empty', () => {
+      artifacts.MetaElements = [
+        {
+          name: 'description',
+          content: '',
+        },
+      ];
+      const result = DescriptionLengthAudit.audit(artifacts);
+      expect(result.score).toEqual(0);
+    });
+
+    it('should return a failing score when description non-existent', () => {
+      artifacts.MetaElements = [];
+      const result = DescriptionLengthAudit.audit(artifacts);
+      expect(result.score).toEqual(0);
     });
   });
 });

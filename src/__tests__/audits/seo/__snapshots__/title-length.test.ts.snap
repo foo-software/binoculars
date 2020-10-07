@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleLengthAudit TitleLengthAudit.meta should match snapshot 1`] = `
+Object {
+  "description": "A title defines a descriptive summary of a page and should have the right amount of content for search engines to parse. Title should be between 50 - 70 characters.",
+  "failureTitle": "Title is not between 50 - 70 characters",
+  "id": "title-length",
+  "requiredArtifacts": Array [
+    "TitleElement",
+  ],
+  "title": "Title length is appropriate",
+}
+`;
