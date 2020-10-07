@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "@foo-software/lighthouse-persist": "^1.0.3",
-    "meow": "^7.1.0"
+    "meow": "^7.1.0",
+    "winston": "^3.3.3"
   }
 }

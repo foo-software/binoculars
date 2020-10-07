@@ -4,6 +4,7 @@ import getUpdatedReportContent from './helpers/getUpdatedReportContent';
 import lighthousePersist from '@foo-software/lighthouse-persist';
 import lighthouseConfig from './config/lighthouseConfig';
 import lighthouseOptions from './config/lighthouseOptions';
+import logger from './helpers/logger';
 
 export default async ({
   awsAccessKeyId,
@@ -22,7 +23,7 @@ export default async ({
   outputDirectory?: string | undefined | unknown;
   url: string | undefined | unknown;
 }) => {
-  console.log('Running Lighthouse...');
+  logger.info('running...');
 
   const { localReport, result, report } = await lighthousePersist({
     awsAccessKeyId,
@@ -35,7 +36,7 @@ export default async ({
     url,
   });
 
-  console.log('Lighthouse audit complete ✔️');
+  logger.info('audit complete ✔️');
 
   if (localReport) {
     const reportPath = path.resolve(localReport);
@@ -43,7 +44,7 @@ export default async ({
     reportContent = getUpdatedReportContent(reportContent);
     fs.writeFileSync(reportPath, reportContent);
 
-    console.log('report path ✔️', reportPath);
+    logger.info(`report path: ${reportPath}`);
   }
 
   return {

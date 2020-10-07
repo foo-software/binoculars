@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import logger from './logger';
 
 const TIMEOUT = 10000; // 10 seconds
 
@@ -11,7 +12,7 @@ export default async (url: string): Promise<Array<string>> => {
       ...(process.env.LOG_LEVEL !== 'debug' ? {} : { dumpio: true }),
     });
 
-    console.log(`browser launched for ${url} ✔️`);
+    logger.info(`browser launched for ${url} ✔️`);
 
     const page = await browser.newPage();
     page.setDefaultTimeout(TIMEOUT);
@@ -19,7 +20,7 @@ export default async (url: string): Promise<Array<string>> => {
 
     await page.goto(`${url}`);
 
-    console.log('page fetch complete ✔️');
+    logger.info('page fetch complete ✔️');
 
     const dataString = await page.evaluate(async () => {
       const content = document.querySelector('.w-post-content');
@@ -61,7 +62,7 @@ export default async (url: string): Promise<Array<string>> => {
 
     const pageData = JSON.parse(dataString);
 
-    console.log('page evaluation complete ✔️');
+    logger.info('page evaluation complete ✔️');
 
     await browser.close();
 
