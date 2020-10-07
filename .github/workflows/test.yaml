@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build
+      - name: build
         run: npm install && npm run build
-      - name: Test
-        run: npm run test
+      - name: unit tests
+        run: npm run test:unit:coverage
+      - name: integration tests
+        run: LOG_LEVEL=off npm run test:integration
