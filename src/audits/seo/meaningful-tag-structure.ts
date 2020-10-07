@@ -1,5 +1,5 @@
 import { Audit } from 'lighthouse';
-import ElementsInterface from '../../interfaces/Elements';
+import ArtifactsInterface from '../../interfaces/Artifacts';
 import AuditScoreInterface from '../../interfaces/AuditScore';
 
 const MIN_DIVERSITY = 2;
@@ -7,7 +7,7 @@ const MIN_DIVERSITY = 2;
 export const UIStrings = {
   title: 'Has a meaningful tag structure',
   failureTitle: `Does not have at least ${MIN_DIVERSITY} different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\``,
-  description: `Semantic HTML with a variety of tags defining content will improve signaling to search engines. should have at least ${MIN_DIVERSITY} different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\``,
+  description: `Semantic HTML with a variety of tags defining content will improve signaling to search engines. Should have at least ${MIN_DIVERSITY} different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\``,
 };
 
 export default class MeaningfulTagStructure extends Audit {
@@ -21,13 +21,11 @@ export default class MeaningfulTagStructure extends Audit {
     };
   }
 
-  static audit(artifacts: {
-    Elements: ElementsInterface;
-  }): AuditScoreInterface {
-    const { img, li, p, table } = artifacts.Elements;
+  static audit(artifacts: ArtifactsInterface): AuditScoreInterface {
+    const { img, li, p, table } = artifacts.Elements || {};
 
     const diversity = [img, li, p, table].reduce((accumulator, current) => {
-      if (!current.length) {
+      if (!current?.length) {
         return accumulator;
       }
 

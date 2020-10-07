@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeaningfulTagStructureAudit MeaningfulTagStructureAudit.meta should match snapshot 1`] = `
+Object {
+  "description": "Semantic HTML with a variety of tags defining content will improve signaling to search engines. Should have at least 2 different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\`",
+  "failureTitle": "Does not have at least 2 different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\`",
+  "id": "meaningful-tag-structure",
+  "requiredArtifacts": Array [
+    "Elements",
+  ],
+  "title": "Has a meaningful tag structure",
+}
+`;
