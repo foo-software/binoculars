@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeywordsAudit KeywordsAudit.meta should match snapshot 1`] = `
+Object {
+  "description": "Keywords present in the title, description and content of a page help narrow targeted search result ranking. At least 2 words should exist in the title, description and exist at least 2 times in the content of the page",
+  "failureTitle": "Keywords of at least 2 words do not exist in the title, description and exist at least 2 times in the content of the page",
+  "id": "keywords",
+  "requiredArtifacts": Array [
+    "Elements",
+    "MetaElements",
+    "TitleElement",
+  ],
+  "title": "Has keyword content",
+}
+`;

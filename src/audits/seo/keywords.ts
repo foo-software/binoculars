@@ -1,6 +1,7 @@
 import { Audit } from 'lighthouse';
+import ArtifactsInterface from '../../interfaces/Artifacts';
 import AuditScoreInterface from '../../interfaces/AuditScore';
-import Collection from '../../interfaces/Collection';
+import CollectionInterface from '../../interfaces/Collection';
 
 const MIN_KEYWORD_COUNT = 2;
 const MIN_INSTANCE_COUNT = 2;
@@ -26,7 +27,10 @@ const ignoreWords = [
   'on',
   'out',
   'the',
+  'their',
   'them',
+  'there',
+  'theyre',
   'this',
   'that',
   'to',
@@ -37,7 +41,7 @@ const ignoreWords = [
   'you',
 ];
 
-const ignoreWordsMap: Collection = ignoreWords.reduce(
+const ignoreWordsMap: CollectionInterface = ignoreWords.reduce(
   (accumulator, current) => ({
     ...accumulator,
     [current]: current,
@@ -68,14 +72,9 @@ export default class Keywords extends Audit {
     };
   }
 
-  static audit(artifacts: any): AuditScoreInterface {
-    const {
-      Elements: {
-        body: [body],
-      },
-      MetaElements,
-      TitleElement,
-    } = artifacts;
+  static audit(artifacts: ArtifactsInterface): AuditScoreInterface {
+    const [body] = artifacts.Elements?.body || [];
+    const { MetaElements, TitleElement } = artifacts;
 
     if (!body || !body.text) {
       return {
@@ -89,7 +88,7 @@ export default class Keywords extends Audit {
       };
     }
 
-    const metaDescription = MetaElements.find(
+    const metaDescription = (MetaElements || []).find(
       (meta: any) => meta.name === 'description',
     );
 
