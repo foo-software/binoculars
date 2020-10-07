@@ -1,11 +1,8 @@
 import { Gatherer } from 'lighthouse';
 import pageFunctions from 'lighthouse/lighthouse-core/lib/page-functions';
+import ElementInterface from '../interfaces/Element';
 
-interface TitleElementInterface {
-  text: string | null;
-}
-
-function collectTitleElement(): TitleElementInterface {
+function collectTitleElement(): ElementInterface {
   // @ts-expect-error - put into scope via stringification
   const [node] = getElementsInDocument('title') || [];
 
@@ -21,7 +18,7 @@ function collectTitleElement(): TitleElementInterface {
 }
 
 export default class TitleElement extends Gatherer {
-  async afterPass(passContext: any): Promise<TitleElementInterface> {
+  async afterPass(passContext: any): Promise<ElementInterface> {
     const driver = passContext.driver;
     const expression = `(() => {
       ${pageFunctions.getElementsInDocumentString};

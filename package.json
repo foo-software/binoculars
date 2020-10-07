@@ -13,8 +13,9 @@
     "generate": "plop",
     "lint": "eslint . --ext .ts,.tsx",
     "prepare": "npm run clean && npm run build",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:unit": "jest",
+    "test:unit:coverage": "jest --coverage",
+    "test:unit:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

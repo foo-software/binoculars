@@ -12,7 +12,7 @@ const mockEvaluateAsync = jest.fn(() =>
   }),
 );
 
-describe('Elements gatherer', () => {
+describe('ElementsGatherer', () => {
   describe('ElementsGatherer.afterPass()', () => {
     it('should evaluate correctly', async () => {
       const gatherer = new ElementsGatherer();

@@ -6,7 +6,7 @@ const mockEvaluateAsync = jest.fn(() =>
   }),
 );
 
-describe('TitleElement gatherer', () => {
+describe('TitleElementGatherer', () => {
   describe('TitleElementGatherer.afterPass()', () => {
     it('should evaluate correctly', async () => {
       const gatherer = new TitleElementGatherer();

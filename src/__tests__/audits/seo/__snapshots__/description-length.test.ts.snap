@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DescriptionLengthAudit DescriptionLengthAudit.meta should match snapshot 1`] = `
+Object {
+  "description": "A description provides an extended summary of a page and should have the right amount of content for search engines to parse. Description should be between 100 - 160 characters",
+  "failureTitle": "Description is not between 100 - 160 characters",
+  "id": "description-length",
+  "requiredArtifacts": Array [
+    "MetaElements",
+  ],
+  "title": "Description length is appropriate",
+}
+`;

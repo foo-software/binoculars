@@ -1,23 +1,8 @@
 import { Gatherer } from 'lighthouse';
 import pageFunctions from 'lighthouse/lighthouse-core/lib/page-functions';
-
-interface ElementInterface {
-  text: string | null;
-}
-
-interface ImageElementInterface {
-  src: string | null;
-}
-
-export interface ElementsInterface {
-  body: ElementInterface[];
-  h1: ElementInterface[];
-  h2: ElementInterface[];
-  img: ElementInterface[];
-  li: ElementInterface[];
-  p: ElementInterface[];
-  table: ElementInterface[];
-}
+import ElementInterface from '../interfaces/Element';
+import ElementsInterface from '../interfaces/Elements';
+import ImageElementInterface from '../interfaces/ImageElement';
 
 function getElement(node: HTMLElement): ElementInterface {
   return {

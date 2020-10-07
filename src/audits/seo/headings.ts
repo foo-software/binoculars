@@ -1,5 +1,5 @@
 import { Audit } from 'lighthouse';
-import { ElementsInterface } from '../../gatherers/elements';
+import ElementsInterface from '../../interfaces/Elements';
 import AuditScore from '../../interfaces/AuditScore';
 
 export const UIStrings = {
