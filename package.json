@@ -15,6 +15,7 @@
     "lint": "eslint . --ext .ts,.tsx",
     "prepare": "npm run build",
     "start:integration-server": "node dist/bin/integration-server.js",
+    "test": "npm run test:unit:coverage",
     "test:unit": "jest",
     "test:unit:coverage": "jest --coverage",
     "test:unit:watch": "jest --watch"
