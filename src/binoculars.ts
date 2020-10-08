@@ -14,6 +14,7 @@ export default async ({
   locale,
   outputDirectory,
   url,
+  urls,
 }: {
   awsAccessKeyId?: string | undefined | unknown;
   awsBucket?: string | undefined | unknown;
@@ -21,42 +22,55 @@ export default async ({
   awsSecretAccessKey?: string | undefined | unknown;
   locale?: string | undefined | unknown;
   outputDirectory?: string | undefined | unknown;
-  url: string | undefined | unknown;
+  url?: string | undefined | unknown;
+  urls?: string[] | undefined | unknown;
 }) => {
-  logger.info(`running audit: ${url}`);
+  const queue = urls || [url];
 
-  const { localReport, result, report } = await lighthousePersist({
-    awsAccessKeyId,
-    awsBucket,
-    awsRegion,
-    awsSecretAccessKey,
-    config: lighthouseConfig(locale),
-    options: lighthouseOptions,
-    outputDirectory,
-    url,
-  });
-
-  const score = result?.categories?.binocularsSeo?.score;
-  const scoreText =
-    typeof score !== 'number' ? '' : ` with a score of ${score * 100}`;
-  logger.info(`✔️ audit complete${scoreText}`);
-
-  if (localReport) {
-    const reportPath = path.resolve(localReport);
-    let reportContent = fs.readFileSync(reportPath, 'utf8');
-    reportContent = getUpdatedReportContent(reportContent);
-    fs.writeFileSync(reportPath, reportContent);
-
-    logger.info(`local report path: ${reportPath}`);
+  if (!Array.isArray(queue)) {
+    throw Error('invalid URL input');
   }
 
-  if (report) {
-    logger.info(`report path: ${report}`);
+  const results = [];
+
+  for (const queuedUrl of queue) {
+    logger.info(`running audit: ${queuedUrl}`);
+
+    const { localReport, result, report } = await lighthousePersist({
+      awsAccessKeyId,
+      awsBucket,
+      awsRegion,
+      awsSecretAccessKey,
+      config: lighthouseConfig(locale),
+      options: lighthouseOptions,
+      outputDirectory,
+      url: queuedUrl,
+    });
+
+    const score = result?.categories?.binocularsSeo?.score;
+    const scoreText =
+      typeof score !== 'number' ? '' : ` with a score of ${score * 100}`;
+    logger.info(`✔️ audit complete${scoreText}`);
+
+    if (localReport) {
+      const reportPath = path.resolve(localReport);
+      let reportContent = fs.readFileSync(reportPath, 'utf8');
+      reportContent = getUpdatedReportContent(reportContent);
+      fs.writeFileSync(reportPath, reportContent);
+
+      logger.info(`local report path: ${reportPath}`);
+    }
+
+    if (report) {
+      logger.info(`report path: ${report}`);
+    }
+
+    results.push({
+      localReport,
+      result,
+      report,
+    });
   }
 
-  return {
-    localReport,
-    result,
-    report,
-  };
+  return results;
 };

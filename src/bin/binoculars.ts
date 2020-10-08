@@ -11,10 +11,13 @@ const {
   locale,
   outputDirectory,
   url,
+  urls,
 } = cli.flags;
 
 const run = async () => {
   try {
+    const urlList = typeof urls !== 'string' ? undefined : urls.split('|');
+
     await binoculars({
       awsAccessKeyId,
       awsBucket,
@@ -23,6 +26,7 @@ const run = async () => {
       locale,
       outputDirectory,
       url,
+      urls: urlList,
     });
   } catch (error) {
     console.error(error);
