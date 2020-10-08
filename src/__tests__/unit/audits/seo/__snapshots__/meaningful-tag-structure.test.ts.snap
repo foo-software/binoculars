@@ -8,6 +8,6 @@ Object {
   "requiredArtifacts": Array [
     "Elements",
   ],
-  "title": "Has a meaningful tag structure",
+  "title": "Has at least 2 different informational HTML tags of the following types: \`<p>\`, \`<li>\`, \`<img>\`, \`<table>\`",
 }
 `;

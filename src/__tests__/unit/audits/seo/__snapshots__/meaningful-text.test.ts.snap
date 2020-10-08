@@ -8,6 +8,6 @@ Object {
   "requiredArtifacts": Array [
     "Elements",
   ],
-  "title": "Has sufficient, meaningful text content",
+  "title": "Has sufficient textual content (300 characters)",
 }
 `;
