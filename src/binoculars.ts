@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import BinocularsResultInterface from './interfaces/BinocularsResult';
 import getUpdatedReportContent from './helpers/getUpdatedReportContent';
 import lighthousePersist from '@foo-software/lighthouse-persist';
 import lighthouseConfig from './config/lighthouseConfig';
@@ -24,7 +25,7 @@ export default async ({
   outputDirectory?: string | undefined | unknown;
   url?: string | undefined | unknown;
   urls?: string[] | undefined | unknown;
-}) => {
+}): Promise<BinocularsResultInterface[]> => {
   const queue = urls || [url];
 
   if (!Array.isArray(queue)) {
