@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import BinocularsResultInterface from './interfaces/BinocularsResult';
 import getUpdatedReportContent from './helpers/getUpdatedReportContent';
 import lighthousePersist from '@foo-software/lighthouse-persist';
@@ -45,6 +43,7 @@ export default async ({
       config: lighthouseConfig(locale),
       options: lighthouseOptions,
       outputDirectory,
+      updateReport: getUpdatedReportContent,
       url: queuedUrl,
     });
 
@@ -54,12 +53,7 @@ export default async ({
     logger.info(`✔️ audit complete${scoreText}`);
 
     if (localReport) {
-      const reportPath = path.resolve(localReport);
-      let reportContent = fs.readFileSync(reportPath, 'utf8');
-      reportContent = getUpdatedReportContent(reportContent);
-      fs.writeFileSync(reportPath, reportContent);
-
-      logger.info(`local report path: ${reportPath}`);
+      logger.info(`local report path: ${localReport}`);
     }
 
     if (report) {

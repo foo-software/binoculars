@@ -52,7 +52,7 @@ const binoculars = require('@foo-software/binoculars').default;
   });
  
   console.log('local report', results[0].localReport);
-  // local report /path/to/my/root/artifacts/lighthouse-report-1602184798157.html
+  // local report ./reports/report-1602194942162.html
 
   console.log('score', results[0].result.categories.binocularsSeo.score);
   // score 0.96
