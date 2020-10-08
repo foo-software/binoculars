@@ -1,6 +1,6 @@
 {
   "name": "@foo-software/binoculars",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A tool to measure web page SEO friendliness",
   "main": "dist/index.js",
   "bin": {
