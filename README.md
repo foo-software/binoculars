@@ -179,6 +179,12 @@ You can optionally provide environment variables as detailed below.
     <td><code>4000</code></td>
   </tr>
   <tr>
+    <td><code>BINOCULARS_INTEGRATION_SERVER_DOMAIN</code></td>
+    <td>Domain of the integration server.</td>
+    <td>string</td>
+    <td><code>localhost</code></td>
+  </tr>
+  <tr>
     <td><code>BINOCULARS_INTEGRATION_SERVER_PORT</code></td>
     <td>Port to run the integration server on.</td>
     <td>number</td>
@@ -189,12 +195,6 @@ You can optionally provide environment variables as detailed below.
     <td>Protocol of the integration server.</td>
     <td>string</td>
     <td><code>http</code></td>
-  </tr>
-  <tr>
-    <td><code>BINOCULARS_INTEGRATION_SERVER_DOMAIN</code></td>
-    <td>Domain of the integration server.</td>
-    <td>string</td>
-    <td><code>localhost</code></td>
   </tr>
   <tr>
     <td><code>LOG_LEVEL</code></td>
