@@ -47,7 +47,11 @@ export default async ({
     reportContent = getUpdatedReportContent(reportContent);
     fs.writeFileSync(reportPath, reportContent);
 
-    logger.info(`report path: ${reportPath}`);
+    logger.info(`local report path: ${reportPath}`);
+  }
+
+  if (report) {
+    logger.info(`report path: ${report}`);
   }
 
   return {
