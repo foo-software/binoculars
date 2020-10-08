@@ -153,6 +153,11 @@ app.get('/fail-all', async (_req, res) => {
 const server = http.createServer(app);
 
 export const PORT = process.env.BINOCULARS_INTEGRATION_SERVER_PORT || 3000;
+export const HOST =
+  process.env.BINOCULARS_INTEGRATION_SERVER_DOMAIN || 'localhost';
+export const PROTOCOL =
+  process.env.BINOCULARS_INTEGRATION_SERVER_PROTOCOL || 'http';
+export const ORIGIN = `${PROTOCOL}://${HOST}:${PORT}`;
 
 export const startServer = () =>
   new Promise((resolve) =>

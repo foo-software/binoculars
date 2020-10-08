@@ -17,7 +17,7 @@
     "prepare": "npm run build",
     "start:integration-server": "node dist/bin/integration-server.js",
     "test": "npm run test:unit:coverage && LOG_LEVEL=off npm run test:integration",
-    "test:integration": "jest ./__tests__/integration",
+    "test:integration": "jest ./__tests__/integration --runInBand",
     "test:unit": "jest ./__tests__/unit",
     "test:unit:coverage": "jest ./__tests__/unit --coverage",
     "test:unit:watch": "jest ./__tests__/unit --watch"
