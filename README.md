@@ -40,20 +40,22 @@ yarn @foo-software/binoculars
 ```javascript
 const path = require('path');
 const binoculars = require('@foo-software/binoculars').default;
-console.log('binoculars', binoculars);
 
 (async () => {
-  const { localReport, result } = await binoculars({
+  const results = await binoculars({
     url: 'https://www.foo.software',
-
+ 
     // example if you have an "artifacts" directory in your root directory
     outputDirectory: path.resolve('./artifacts'),
-
+ 
     // any other options go here
   });
+ 
+  console.log('local report', results[0].localReport);
+  // local report /path/to/my/root/artifacts/lighthouse-report-1602184798157.html
 
-  console.log('full payload', { localReport, result: result[0] });
-  console.log('score', result[0].categories.binocularsSeo.score);
+  console.log('score', results[0].result.categories.binocularsSeo.score);
+  // score 0.96
 })();
 ```
 
