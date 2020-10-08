@@ -176,3 +176,30 @@ You can optionally provide environment variables as detailed below.
     <td><code>info</code></td>
   </tr>
 </table>
+
+## Return Payload
+
+`binoculars` is a promise that resolves an array. The reason it resolves with an array is because options allow `url` or `urls`. Because a consistent return is ideal, we return an array regardless if there is only one result or more. Each array item is an object with the below payload.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <td><code>localReport</code></td>
+    <td>A local path to the report (if applicable).</td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><code>result</code></td>
+    <td>A comprehensive result - the equivalent of what is returned when using the <code>lighthouse</code> module directly.</td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><code>report</code></td>
+    <td>A URL to the report HTML file.</td>
+    <td><code>string</code></td>
+  </tr>
+</table>
