@@ -14,6 +14,36 @@ Object {
     "binocularsSeo": Object {
       "auditRefs": Array [
         Object {
+          "group": "meaningful-content",
+          "id": "title-length",
+          "weight": 7,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "description-length",
+          "weight": 7,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "headings",
+          "weight": 5,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "meaningful-text",
+          "weight": 5,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "meaningful-tag-structure",
+          "weight": 5,
+        },
+        Object {
+          "group": "meaningful-content",
+          "id": "keywords",
+          "weight": 7,
+        },
+        Object {
           "group": "seo-mobile",
           "id": "viewport",
           "weight": 5,
@@ -326,36 +356,6 @@ Object {
         Object {
           "id": "use-landmarks",
           "weight": 0,
-        },
-        Object {
-          "group": "meaningful-content",
-          "id": "title-length",
-          "weight": 7,
-        },
-        Object {
-          "group": "meaningful-content",
-          "id": "description-length",
-          "weight": 7,
-        },
-        Object {
-          "group": "meaningful-content",
-          "id": "headings",
-          "weight": 5,
-        },
-        Object {
-          "group": "meaningful-content",
-          "id": "meaningful-text",
-          "weight": 5,
-        },
-        Object {
-          "group": "meaningful-content",
-          "id": "meaningful-tag-structure",
-          "weight": 5,
-        },
-        Object {
-          "group": "meaningful-content",
-          "id": "keywords",
-          "weight": 7,
         },
       ],
       "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Binoculars does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",

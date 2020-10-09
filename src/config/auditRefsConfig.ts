@@ -1,4 +1,35 @@
 export const seoAuditRefs = [
+  // custom Binoculars content group
+  {
+    id: 'title-length',
+    group: 'meaningful-content',
+    weight: 7,
+  },
+  {
+    id: 'description-length',
+    group: 'meaningful-content',
+    weight: 7,
+  },
+  {
+    id: 'headings',
+    group: 'meaningful-content',
+    weight: 5,
+  },
+  {
+    id: 'meaningful-text',
+    group: 'meaningful-content',
+    weight: 5,
+  },
+  {
+    id: 'meaningful-tag-structure',
+    group: 'meaningful-content',
+    weight: 5,
+  },
+  {
+    id: 'keywords',
+    group: 'meaningful-content',
+    weight: 7,
+  },
   // from SEO category
   {
     id: 'viewport',
@@ -314,36 +345,5 @@ export const seoAuditRefs = [
   {
     id: 'use-landmarks',
     weight: 0,
-  },
-  // custom Binoculars content group
-  {
-    id: 'title-length',
-    group: 'meaningful-content',
-    weight: 7,
-  },
-  {
-    id: 'description-length',
-    group: 'meaningful-content',
-    weight: 7,
-  },
-  {
-    id: 'headings',
-    group: 'meaningful-content',
-    weight: 5,
-  },
-  {
-    id: 'meaningful-text',
-    group: 'meaningful-content',
-    weight: 5,
-  },
-  {
-    id: 'meaningful-tag-structure',
-    group: 'meaningful-content',
-    weight: 5,
-  },
-  {
-    id: 'keywords',
-    group: 'meaningful-content',
-    weight: 7,
   },
 ];
