@@ -126,6 +126,13 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
     <td>no</td>
   </tr>
   <tr>
+    <td><code>url</code></td>
+    <td>A URL to run Binoculars against.</td>
+    <td><code>string[]</code></td>
+    <td><code>undefined</code></td>
+    <td>yes</td>
+  </tr>
+  <tr>
     <td><code>urls</code></td>
     <td>An array of URLs. In the CLI this value should be a pipe separated list (<code>|</code>).</td>
     <td><code>string[]</code></td>
