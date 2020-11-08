@@ -29,7 +29,11 @@ export default async ({
 
     // table header
     markdown += `<tr><td>url</td><td>${result.url}</td></tr>`;
-    markdown += `<tr><td>score</td><td>${badge}</td></tr>`;
+
+    const reportLink = !result.report
+      ? ''
+      : ` | <a href="${result.report}">report</a>`;
+    markdown += `<tr><td>score</td><td>${badge}${reportLink}</td></tr>`;
 
     // if we have a URL for the full report
     if (result.report) {
