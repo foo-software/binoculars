@@ -19,7 +19,7 @@ export default async ({
   commentUrl: string;
   results: BinocularsResultInterface[];
 }) => {
-  let markdown = '\n<table>';
+  let markdown = '\n<table><tr><th colspan="2">Binoculars Results</th></tr>';
 
   results.forEach((result) => {
     const badge = getBadge({
@@ -28,8 +28,8 @@ export default async ({
     });
 
     // table header
-    markdown += `<tr><td colspan="2">${badge}</td></tr>`;
     markdown += `<tr><td>URL</td><td>${result.url}</td></tr>`;
+    markdown += `<tr><td>score</td><td>${badge}</td></tr>`;
 
     // if we have a URL for the full report
     if (result.report) {
