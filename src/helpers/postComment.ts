@@ -10,7 +10,7 @@ export default async ({
   commentUrl: string;
   results: BinocularsResultInterface[];
 }) => {
-  let markdown = '\n<table><tr><th colspan="2">Binoculars Results</th></tr>';
+  let markdown = '\n<table><tr><th colspan="3">Binoculars Results</th></tr>';
 
   // table header
   const reportHeader = !results[0].report ? '' : '<th>report</th>';
