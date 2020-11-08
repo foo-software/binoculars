@@ -1,5 +1,7 @@
 # `@foo-software/binoculars`
 
+<img alt="Binoculars Logo" align="right" src="https://s3.amazonaws.com/foo.software/images/marketing/binoculars.svg" width="20%" />
+
 A tool to measure web page SEO friendliness. Binoculars extends [Google's Lighthouse](https://github.com/GoogleChrome/lighthouse) to provide a more opinionated, SEO specific audit.
 
 - Choice programmatic usage or CLI.
@@ -128,7 +130,7 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
   <tr>
     <td><code>url</code></td>
     <td>A URL to run Binoculars against.</td>
-    <td><code>string[]</code></td>
+    <td><code>string</code></td>
     <td><code>undefined</code></td>
     <td>yes</td>
   </tr>
@@ -210,3 +212,7 @@ You can optionally provide environment variables as detailed below.
     <td><code>info</code></td>
   </tr>
 </table>
+
+## Credits
+
+> <img src="https://lighthouse-check.s3.amazonaws.com/images/logo-simple-blue-light-512.png" width="100" height="100" align="left" /> This package was brought to you by [Foo - a website performance monitoring tool](https://www.foo.software). Create a **free account** with standard performance testing. Automatic website performance testing, uptime checks, charts showing performance metrics by day, month, and year. Foo also provides real time notifications. Users can integrate email, Slack and PagerDuty notifications.
