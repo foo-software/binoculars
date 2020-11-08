@@ -1,14 +1,5 @@
 import fetch from 'node-fetch';
 import BinocularsResultInterface from '../interfaces/BinocularsResult';
-import getLighthouseScoreColor from './getLighthouseScoreColor';
-
-const getBadge = ({ title, score }: { title: string; score: number }) =>
-  `<img src="https://img.shields.io/badge/${title}-${score}-${getLighthouseScoreColor(
-    {
-      isHex: false,
-      score,
-    },
-  )}?style=flat-square" />`;
 
 export default async ({
   commentAccessToken,
@@ -21,24 +12,20 @@ export default async ({
 }) => {
   let markdown = '\n<table><tr><th colspan="2">Binoculars Results</th></tr>';
 
+  // table header
+  const reportHeader = !results[0].report ? '' : '<th>report</th>';
+  markdown += `<tr><th>url</th>${reportHeader}<th>score</th></tr>`;
+
   results.forEach((result) => {
-    const badge = getBadge({
-      title: 'seo',
-      score: result.result.categories.binocularsSeo.score * 100,
-    });
-
-    // table header
-    markdown += `<tr><td>url</td><td>${result.url}</td></tr>`;
-
-    const reportLink = !result.report
+    const urlCell = `<td>${result.url}</td>`;
+    const scoreCell = `<td><code>${
+      result.result.categories.binocularsSeo.score * 100
+    }</code></td>`;
+    const reportCell = !result.report
       ? ''
-      : ` | <a href="${result.report}">report</a>`;
-    markdown += `<tr><td>score</td><td>${badge}${reportLink}</td></tr>`;
+      : `<td><a href="${result.report}">report</a></td>`;
 
-    // if we have a URL for the full report
-    if (result.report) {
-      markdown += `<tr><td>report</td><td>${result.report}</td></tr>`;
-    }
+    markdown += `<tr>${urlCell}${reportCell}${scoreCell}</tr>`;
   });
 
   // table end
