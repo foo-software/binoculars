@@ -28,7 +28,7 @@ export default async ({
     });
 
     // table header
-    markdown += `<tr><td>URL</td><td>${result.url}</td></tr>`;
+    markdown += `<tr><td>url</td><td>${result.url}</td></tr>`;
     markdown += `<tr><td>score</td><td>${badge}</td></tr>`;
 
     // if we have a URL for the full report
