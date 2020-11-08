@@ -2,7 +2,7 @@ name: Test Features
 on: [pull_request]
 
 jobs:
-  comment:
+  test-features:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master

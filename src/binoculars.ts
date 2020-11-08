@@ -89,10 +89,11 @@ export default async ({
   if (typeof minScore === 'number') {
     const failedAudits = [];
     for (const result of results) {
-      if (result.result.categories.binocularsSeo.score * 100 < minScore) {
+      const score = result.result.categories.binocularsSeo.score * 100;
+      if (score < minScore) {
         failedAudits.push({
-          score: result.result.categories.binocularsSeo.score,
           url: result.url,
+          score,
         });
       }
     }
