@@ -15,6 +15,7 @@ export default async ({
   commentUrl,
   enableComments,
   locale,
+  minScore,
   outputDirectory,
   url,
   urls,
@@ -27,6 +28,7 @@ export default async ({
   commentUrl?: string | undefined | unknown;
   enableComments?: boolean | undefined | unknown;
   locale?: string | undefined | unknown;
+  minScore?: number | undefined | unknown;
   outputDirectory?: string | undefined | unknown;
   url?: string | undefined | unknown;
   urls?: string[] | undefined | unknown;
@@ -82,6 +84,26 @@ export default async ({
       results,
     });
     logger.info('✔️ comment posted');
+  }
+
+  if (typeof minScore === 'number') {
+    const failedAudits = [];
+    for (const result of results) {
+      if (result.result.categories.binocularsSeo.score * 100 < minScore) {
+        failedAudits.push({
+          score: result.result.categories.binocularsSeo.score,
+          url: result.url,
+        });
+      }
+    }
+
+    if (failedAudits.length) {
+      throw Error(
+        `Minimum score requirement of ${minScore} failed. ${JSON.stringify(
+          failedAudits,
+        )}`,
+      );
+    }
   }
 
   return results;
