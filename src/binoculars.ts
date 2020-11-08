@@ -4,12 +4,16 @@ import lighthousePersist from '@foo-software/lighthouse-persist';
 import lighthouseConfig from './config/lighthouseConfig';
 import lighthouseOptions from './config/lighthouseOptions';
 import logger from './helpers/logger';
+import postComment from './helpers/postComment';
 
 export default async ({
   awsAccessKeyId,
   awsBucket,
   awsRegion,
   awsSecretAccessKey,
+  commentAccessToken,
+  commentUrl,
+  enableComments,
   locale,
   outputDirectory,
   url,
@@ -19,6 +23,9 @@ export default async ({
   awsBucket?: string | undefined | unknown;
   awsRegion?: string | undefined | unknown;
   awsSecretAccessKey?: string | undefined | unknown;
+  commentAccessToken?: string | undefined | unknown;
+  commentUrl?: string | undefined | unknown;
+  enableComments?: boolean | undefined | unknown;
   locale?: string | undefined | unknown;
   outputDirectory?: string | undefined | unknown;
   url?: string | undefined | unknown;
@@ -64,7 +71,17 @@ export default async ({
       localReport,
       result,
       report,
+      url: queuedUrl,
     });
+  }
+
+  if (commentAccessToken && commentUrl && enableComments) {
+    await postComment({
+      commentAccessToken: `${commentAccessToken}`,
+      commentUrl: `${commentUrl}`,
+      results,
+    });
+    logger.info('✔️ comment posted');
   }
 
   return results;
