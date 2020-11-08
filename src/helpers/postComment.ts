@@ -19,16 +19,13 @@ export default async ({
   commentUrl: string;
   results: BinocularsResultInterface[];
 }) => {
-  let markdown = '';
+  let markdown = '\n<table>';
 
   results.forEach((result) => {
     const badge = getBadge({
       title: 'seo',
-      score: result.result.categories.binocularsSeo.score,
+      score: result.result.categories.binocularsSeo.score * 100,
     });
-
-    // table start
-    markdown += '\n<table>';
 
     // table header
     markdown += `<tr><td colspan="2">${badge}</td></tr>`;
@@ -38,10 +35,10 @@ export default async ({
     if (result.report) {
       markdown += `<tr><td>report</td><td>${result.report}</td></tr>`;
     }
-
-    // table end
-    markdown += `</table>\n\n`;
   });
+
+  // table end
+  markdown += `</table>\n\n`;
 
   // create an identifier within the comment when searching comments
   // in the future

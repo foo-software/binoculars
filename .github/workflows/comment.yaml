@@ -2,7 +2,7 @@ name: Comment
 on: [pull_request]
 
 jobs:
-  lighthouse:
+  comment:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
