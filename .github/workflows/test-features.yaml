@@ -1,0 +1,27 @@
+name: Test Features
+on: [pull_request]
+
+jobs:
+  test-features:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "12.x"
+    - run: npm install
+    - run: npm run build
+    - name: Test Features
+      run: |
+        node ./dist/bin/binoculars.js \
+        --urls "https://www.foo.software|https://www.foo.software/lighthouse/" \
+        --awsAccessKeyId "${{ secrets.AWS_ACCESS_KEY_ID }}" \
+        --awsBucket "${{ secrets.AWS_BUCKET }}" \
+        --awsRegion "${{ secrets.AWS_REGION }}" \
+        --awsSecretAccessKey "${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
+        --commentAccessToken "${{ secrets.BINOCULARS_GITHUB_ACCESS_TOKEN }}" \
+        --commentUrl "https://api.github.com/repos/foo-software/binoculars/pulls/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/reviews" \
+        --enableComments \
+        --minScore 90 \
+        --slackWebhookUrl "${{ secrets.SLACK_WEBHOOK_URL }}" \

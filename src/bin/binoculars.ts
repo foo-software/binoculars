@@ -4,12 +4,21 @@ import binoculars from '../binoculars';
 
 const cli = meow();
 const {
+  author,
   awsAccessKeyId,
   awsBucket,
   awsRegion,
   awsSecretAccessKey,
+  branch,
+  commentAccessToken,
+  commentUrl,
+  enableComments,
   locale,
+  minScore,
   outputDirectory,
+  pr,
+  sha,
+  slackWebhookUrl,
   url,
   urls,
 } = cli.flags;
@@ -19,12 +28,21 @@ const run = async () => {
     const urlList = typeof urls !== 'string' ? undefined : urls.split('|');
 
     await binoculars({
+      author,
       awsAccessKeyId,
       awsBucket,
       awsRegion,
       awsSecretAccessKey,
+      branch,
+      commentAccessToken,
+      commentUrl,
+      enableComments,
       locale,
+      minScore,
       outputDirectory,
+      pr,
+      sha,
+      slackWebhookUrl,
       url,
       urls: urlList,
     });
