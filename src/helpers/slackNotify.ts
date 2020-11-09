@@ -29,7 +29,7 @@ export default async ({
     let text = `*URL*: ${result.url}\n*Score*: \`${score}\``;
 
     if (result.report) {
-      text += `\n<${result.report}|Report>`;
+      text += `\n*Report*: <${result.report}|click here>`;
     }
 
     // if we have a branch

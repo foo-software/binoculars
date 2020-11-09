@@ -127,6 +127,27 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
     <td><code>undefined</code></td>
     <td>no</td>
   </tr>
+  <tr>
+    <td><code>commentAccessToken</code></td>
+    <td><a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">Access token</a> of a user to post PR comments.</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><code>commentUrl</code></td>
+    <td>An endpoint to post comments to. Typically this will be from <a href="https://developer.github.com/v3/pulls/reviews/#create-a-pull-request-review">GitHub's API</a>. Example: <code>https://api.github.com/repos/:owner/:repo/pulls/:pull_number/reviews</code></td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><code>enableComments</code></td>
+    <td>If <code>true</code> and <code>commentAccessToken</code> is set along with <code>commentUrl</code>, scores will be posted as comments.</td>
+    <td><code>boolean</code></td>
+    <td><code>true</code></td>
+    <td>no</td>
+  </tr>
   <!-- <tr>
     <td><code>locale</code></td>
     <td>A locale for Lighthouse reports. Example: <code>ja</code></td>
@@ -137,6 +158,27 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
   <tr>
     <td><code>outputDirectory</code></td>
     <td>An absolute directory path to output report. You can do this an an alternative or combined with an S3 upload.</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><code>pr</code></td>
+    <td>For Slack notifications: A version control pull request URL, typically from GitHub.</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><code>slackWebhookUrl</code></td>
+    <td>A Slack Incoming Webhook URL to send notifications to.</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><code>sha</code></td>
+    <td>For Slack notifications: A version control <code>sha</code>, typically from GitHub.</td>
     <td><code>string</code></td>
     <td><code>undefined</code></td>
     <td>no</td>
