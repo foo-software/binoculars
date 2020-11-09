@@ -150,6 +150,13 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
     <td><code>true</code></td>
     <td>no</td>
   </tr>
+  <tr>
+    <td><code>minScore</code></td>
+    <td>The required minimum score. If score is lower an error will throw.</td>
+    <td><code>number</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
   <!-- <tr>
     <td><code>locale</code></td>
     <td>A locale for Lighthouse reports. Example: <code>ja</code></td>
