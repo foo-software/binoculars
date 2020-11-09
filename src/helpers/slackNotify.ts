@@ -24,10 +24,12 @@ export default async ({
     typeof prParam !== 'string' || prParam === 'true' ? undefined : prParam;
 
   for (const result of results) {
+    const score = result.result.categories.binocularsSeo.score * 100;
+
     // link the report if we have it
     let text = !result.report
-      ? 'Binoculars audit'
-      : `<${result.report}|Binoculars audit>`;
+      ? `Binoculars Score: ${score}`
+      : `<${result.report}|Binoculars Score>: ${score}`;
 
     // if we have a branch
     if (branch) {
@@ -44,13 +46,14 @@ export default async ({
       }
     }
 
-    const score = result.result.categories.binocularsSeo.score * 100;
-
     await webhook.send({
       text: result.url,
       attachments: [
         {
-          color: '#58e3be',
+          color: getLighthouseScoreColor({
+            isHex: true,
+            score,
+          }),
           text,
           thumb_url:
             'https://s3.amazonaws.com/foo.software/images/marketing/binoculars.png',
@@ -59,13 +62,6 @@ export default async ({
             : {
                 footer,
               }),
-        },
-        {
-          color: getLighthouseScoreColor({
-            isHex: true,
-            score,
-          }),
-          text: `*SEO*: ${score}`,
         },
       ],
     });
