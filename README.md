@@ -4,7 +4,7 @@
 
 A tool to measure web page SEO friendliness. Binoculars extends [Google's Lighthouse](https://github.com/GoogleChrome/lighthouse) to provide a more opinionated, SEO specific audit.
 
-- Choice programmatic usage or CLI.
+- Choice of programmatic usage or CLI.
 - Run a single audit or multiple audits at once.
 - Upload reports to S3 via simple configuration.
 - Automatically post results as comments in GitHub via commits or pull requests (see [options](#options)).
