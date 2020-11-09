@@ -1,10 +1,10 @@
-// https://developers.google.com/web/tools/lighthouse/v3/scoring
+// https://web.dev/performance-scoring/
 export default ({ isHex, score }: { isHex: boolean; score: number }) => {
   if (typeof score !== 'number') {
     return !isHex ? 'lightgrey' : '#e0e0e0';
   }
 
-  let scoreColor = !isHex ? 'green' : '#0cce6b';
+  let scoreColor = !isHex ? 'green' : '#58e3be';
 
   // medium range
   if (score < 90) {
@@ -13,7 +13,7 @@ export default ({ isHex, score }: { isHex: boolean; score: number }) => {
 
   // bad
   if (score < 50) {
-    scoreColor = !isHex ? 'red' : '#f74531';
+    scoreColor = !isHex ? 'red' : '#fd4b83';
   }
 
   return scoreColor;
