@@ -5,31 +5,42 @@ import lighthouseConfig from './config/lighthouseConfig';
 import lighthouseOptions from './config/lighthouseOptions';
 import logger from './helpers/logger';
 import postComment from './helpers/postComment';
+import slackNotify from './helpers/slackNotify';
 
 export default async ({
+  author,
   awsAccessKeyId,
   awsBucket,
   awsRegion,
   awsSecretAccessKey,
+  branch,
   commentAccessToken,
   commentUrl,
   enableComments,
   locale,
   minScore,
   outputDirectory,
+  pr,
+  sha,
+  slackWebhookUrl,
   url,
   urls,
 }: {
+  author?: string | undefined | unknown;
   awsAccessKeyId?: string | undefined | unknown;
   awsBucket?: string | undefined | unknown;
   awsRegion?: string | undefined | unknown;
   awsSecretAccessKey?: string | undefined | unknown;
+  branch?: string | undefined | unknown;
   commentAccessToken?: string | undefined | unknown;
   commentUrl?: string | undefined | unknown;
   enableComments?: boolean | undefined | unknown;
   locale?: string | undefined | unknown;
   minScore?: number | undefined | unknown;
   outputDirectory?: string | undefined | unknown;
+  pr?: string | undefined | unknown;
+  sha?: string | undefined | unknown;
+  slackWebhookUrl?: string | undefined | unknown;
   url?: string | undefined | unknown;
   urls?: string[] | undefined | unknown;
 }): Promise<BinocularsResultInterface[]> => {
@@ -84,6 +95,17 @@ export default async ({
       results,
     });
     logger.info('✔️ comment posted');
+  }
+
+  if (typeof slackWebhookUrl === 'string') {
+    await slackNotify({
+      author,
+      branch,
+      pr,
+      results,
+      sha,
+      slackWebhookUrl,
+    });
   }
 
   if (typeof minScore === 'number') {

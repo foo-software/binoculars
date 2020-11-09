@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "@foo-software/lighthouse-persist": "^1.0.4",
+    "@slack/webhook": "^5.0.3",
     "@types/express": "^4.17.8",
     "express": "^4.17.1",
     "meow": "^7.1.0",

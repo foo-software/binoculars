@@ -23,4 +23,5 @@ jobs:
         --commentAccessToken "${{ secrets.BINOCULARS_GITHUB_ACCESS_TOKEN }}" \
         --commentUrl "https://api.github.com/repos/foo-software/binoculars/pulls/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/reviews" \
         --enableComments \
-        --minScore 90
+        --minScore 90 \
+        --slackWebhookUrl "${{ secrets.SLACK_WEBHOOK_URL }}" \
