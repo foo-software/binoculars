@@ -86,6 +86,13 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
     <th>Required</th>
   </tr>
   <tr>
+    <td><code>author</code></td>
+    <td>For Slack notifications: A user handle, typically from GitHub.</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
     <td><code>awsAccessKeyId</code></td>
     <td>The AWS <code>accessKeyId</code> for an S3 bucket.</td>
     <td><code>string</code></td>
@@ -109,6 +116,13 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
   <tr>
     <td><code>awsSecretAccessKey</code></td>
     <td>The AWS <code>secretAccessKey</code> for an S3 bucket.</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><code>branch</code></td>
+    <td>For Slack notifications: A version control branch, typically from GitHub.</td>
     <td><code>string</code></td>
     <td><code>undefined</code></td>
     <td>no</td>

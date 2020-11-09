@@ -26,10 +26,11 @@ export default async ({
   for (const result of results) {
     const score = result.result.categories.binocularsSeo.score * 100;
 
-    // link the report if we have it
-    let text = !result.report
-      ? `${result.url}: ${score}`
-      : `<${result.report}|${result.url}: ${score}>`;
+    let text = `*URL*: ${result.url}\n*Score*: \`${score}\``;
+
+    if (result.report) {
+      text += `\n<${result.report}|Report>`;
+    }
 
     // if we have a branch
     if (branch) {
