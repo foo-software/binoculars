@@ -28,8 +28,8 @@ export default async ({
 
     // link the report if we have it
     let text = !result.report
-      ? `Binoculars Score: ${score}`
-      : `<${result.report}|Binoculars Score>: ${score}`;
+      ? `${result.url}: ${score}`
+      : `<${result.report}|${result.url}: ${score}>`;
 
     // if we have a branch
     if (branch) {
@@ -47,7 +47,7 @@ export default async ({
     }
 
     await webhook.send({
-      text: result.url,
+      text: 'Binoculars Audit',
       attachments: [
         {
           color: getLighthouseScoreColor({
