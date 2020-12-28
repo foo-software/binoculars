@@ -55,7 +55,12 @@ export default async ({
   for (const queuedUrl of queue) {
     logger.info(`running audit: ${queuedUrl}`);
 
-    const { localReport, result, report } = await lighthousePersist({
+    const {
+      finalScreenshot,
+      localReport,
+      result,
+      report,
+    } = await lighthousePersist({
       awsAccessKeyId,
       awsBucket,
       awsRegion,
@@ -81,6 +86,7 @@ export default async ({
     }
 
     results.push({
+      finalScreenshot,
       localReport,
       result,
       report,
