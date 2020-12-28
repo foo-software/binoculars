@@ -4,8 +4,7 @@
   "description": "A tool to measure web page SEO friendliness",
   "main": "dist/index.js",
   "bin": {
-    "binoculars": "dist/bin/binoculars.js",
-    "binoculars-integration-server": "dist/bin/integration-server.js"
+    "binoculars": "bin/binoculars.js"
   },
   "scripts": {
     "binoculars": "node dist/bin/binoculars.js",

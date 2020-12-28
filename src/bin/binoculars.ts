@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import meow from 'meow';
 import binoculars from '../binoculars';
 
@@ -24,7 +23,7 @@ const {
   urls,
 } = cli.flags;
 
-const run = async () => {
+export default async () => {
   try {
     const urlList = typeof urls !== 'string' ? undefined : urls.split('|');
 
@@ -55,5 +54,3 @@ const run = async () => {
 
   process.exit(0);
 };
-
-run();
