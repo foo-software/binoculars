@@ -151,6 +151,13 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
     <td>no</td>
   </tr>
   <tr>
+    <td><code>finalScreenshotAwsBucket</code></td>
+    <td>The AWS <code>Bucket</code> for an S3 bucket. If this is defined, the final screenshot will be uploaded here</td>
+    <td><code>string</code></td>
+    <td><code>undefined</code></td>
+    <td>no</td>
+  </tr>
+  <tr>
     <td><code>minScore</code></td>
     <td>The required minimum score. If score is lower an error will throw.</td>
     <td><code>number</code></td>
@@ -219,6 +226,11 @@ binoculars --urls "https://www.foo.software|https://www.foo.software/register"
     <th>Type</th>
   </tr>
   <tr>
+    <td><code>finalScreenshot</code></td>
+    <td>A URL to the final screenshot image. This will only be defined if <code>finalScreenshotAwsBucket</code> parameter was.</td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
     <td><code>localReport</code></td>
     <td>A local path to the report (if applicable).</td>
     <td><code>string</code></td>
@@ -280,4 +292,4 @@ You can optionally provide environment variables as detailed below.
 
 ## Credits
 
-> <img src="https://lighthouse-check.s3.amazonaws.com/images/logo-simple-blue-light-512.png" width="100" height="100" align="left" /> This package was brought to you by [Foo - a website performance monitoring tool](https://www.foo.software). Create a **free account** with standard performance testing. Automatic website performance testing, uptime checks, charts showing performance metrics by day, month, and year. Foo also provides real time notifications. Users can integrate email, Slack and PagerDuty notifications.
+> <img src="https://lighthouse-check.s3.amazonaws.com/images/logo-simple-blue-light-512.png" width="100" height="100" align="left" /> This package was brought to you by [Foo - a website quality monitoring tool](https://www.foo.software). Automatically test and monitor website performance, SEO and accessibility with Lighthouse. Analyze historical records of Lighthouse tests with automated monitoring. Report with confidence about SEO and performance improvements to stay on top of changes when they happen!

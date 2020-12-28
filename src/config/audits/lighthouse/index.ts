@@ -22,6 +22,7 @@ export { default as getDlitem } from './dlitem';
 export { default as getDocumentTitle } from './document-title';
 export { default as getDuplicateIdActive } from './duplicate-id-active';
 export { default as getDuplicateIdAria } from './duplicate-id-aria';
+export { default as getFinalScreenshot } from './final-screenshot';
 export { default as getFocusTraps } from './focus-traps';
 export { default as getFocusableControls } from './focusable-controls';
 export { default as getFontSize } from './font-size';

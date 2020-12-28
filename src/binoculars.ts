@@ -88,6 +88,10 @@ export default async ({
       logger.info(`report path: ${report}`);
     }
 
+    if (finalScreenshot) {
+      logger.info(`final screenshot: ${finalScreenshot}`);
+    }
+
     results.push({
       finalScreenshot,
       localReport,

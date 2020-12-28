@@ -168,6 +168,13 @@ Object {
 }
 `;
 
+exports[`audits config getFinalScreenshot() should match snapshot 1`] = `
+Object {
+  "description": "The last screenshot captured of the pageload.",
+  "title": "Final Screenshot",
+}
+`;
+
 exports[`audits config getFocusTraps() should match snapshot 1`] = `
 Object {
   "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn more](https://www.foo.software/binoculars/focus-traps/).",

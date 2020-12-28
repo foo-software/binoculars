@@ -346,4 +346,10 @@ export const seoAuditRefs = [
     id: 'use-landmarks',
     weight: 0,
   },
+  // misc
+  {
+    id: 'final-screenshot',
+    weight: 0,
+    group: 'seo-content',
+  },
 ];
