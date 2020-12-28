@@ -17,6 +17,7 @@ export default async ({
   commentAccessToken,
   commentUrl,
   enableComments,
+  finalScreenshotAwsBucket,
   locale,
   minScore,
   outputDirectory,
@@ -35,6 +36,7 @@ export default async ({
   commentAccessToken?: string | undefined | unknown;
   commentUrl?: string | undefined | unknown;
   enableComments?: boolean | undefined | unknown;
+  finalScreenshotAwsBucket?: boolean | undefined | unknown;
   locale?: string | undefined | unknown;
   minScore?: number | undefined | unknown;
   outputDirectory?: string | undefined | unknown;
@@ -66,6 +68,7 @@ export default async ({
       awsRegion,
       awsSecretAccessKey,
       config: lighthouseConfig(locale),
+      finalScreenshotAwsBucket,
       options: lighthouseOptions,
       outputDirectory,
       updateReport: getUpdatedReportContent,
